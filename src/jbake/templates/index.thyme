@@ -5,9 +5,9 @@
   <body>
     <div th:replace="menu.thyme::menu"/>
 
-    <div class="callout large primary">
+    <div class="callout large primary" th:attr="data-interchange='[img/proxima/small.jpg, small], [img/proxima/medium.jpg, medium], [img/proxima/large.jpg, large]'">
       <div class="row column text-center">
-        <h1>Blog</h1>
+        <h1 style="color:white">Blog</h1>
       </div>
     </div>
 

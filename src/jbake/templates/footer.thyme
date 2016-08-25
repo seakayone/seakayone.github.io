@@ -9,7 +9,7 @@
         </ul>
       </div>
       <script th:with="rootpath=(${content.rootpath != null} ? ${content.rootpath} : '')" th:src="${rootpath} + 'js/jquery.js'"></script>
-      <script th:with="rootpath=(${content.rootpath != null} ? ${content.rootpath} : '')" th:src="${rootpath} + 'js/foundation.min.js'"></script>
+      <script src="https://cdn.jsdelivr.net/foundation/6.2.3/foundation.min.js"></script>
       <script th:with="rootpath=(${content.rootpath != null} ? ${content.rootpath} : '')" th:src="${rootpath} + 'js/app.js'"></script>
     </div>
   </body>
