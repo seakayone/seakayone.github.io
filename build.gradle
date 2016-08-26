@@ -1,6 +1,7 @@
 buildscript {
   repositories {
     jcenter()
+    maven { url "http://dl.bintray.com/robfletcher/gradle-plugins" }
   }
   dependencies {
     classpath 'me.champeau.gradle:jbake-gradle-plugin:0.2'
@@ -10,10 +11,19 @@ buildscript {
     classpath 'org.pegdown:pegdown:1.5.0'
     classpath 'org.thymeleaf:thymeleaf:2.1.3.RELEASE'
     classpath 'org.thymeleaf.extras:thymeleaf-extras-conditionalcomments:2.1.1.RELEASE'
+    classpath "com.github.robfletcher:compass-gradle-plugin:2.0.5"
   }
 }
 
+apply plugin: "com.github.robfletcher.compass"
 apply plugin: 'me.champeau.jbake'
+
+compass {
+  cssDir = file("src/jbake/assets/css")
+  sassDir = file("src/scss")
+}
+
+jbake.dependsOn compassCompile
 
 jbake {
   input = file 'src/jbake'

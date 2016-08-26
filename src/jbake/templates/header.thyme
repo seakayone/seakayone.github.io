@@ -10,7 +10,7 @@
       <meta name="generator" content="JBake"/>
 
       <!-- Le styles -->
-      <link th:with="rootpath=(${content.rootpath != null} ? ${content.rootpath} : '')" th:href="${rootpath}+'css/foundation.min.css'" rel="stylesheet"/>
+      <link th:with="rootpath=(${content.rootpath != null} ? ${content.rootpath} : '')" th:href="${rootpath}+'css/app.css'" rel="stylesheet"/>
       <link th:with="rootpath=(${content.rootpath != null} ? ${content.rootpath} : '')" rel="shortcut icon" th:href="${rootpath}+'favicon.ico'"/>
 
   </head>
