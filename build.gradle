@@ -26,4 +26,4 @@ task publish(dependsOn: 'jbake', type: GradleBuild) {
   tasks = ['publishGhPages']
 }
 
-wrapper.gradleVersion = '2.12'
+wrapper.gradleVersion = '3.0'
