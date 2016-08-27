@@ -1,6 +1,6 @@
 = EuroSciPy Conference 2016
 Jonathan Bullock
-2016-01-17
+2016-08-27
 :jbake-type: post
 :jbake-status: published
 :jbake-tags: blog, asciidoc
