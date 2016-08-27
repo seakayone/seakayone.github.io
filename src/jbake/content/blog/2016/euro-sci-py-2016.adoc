@@ -6,7 +6,7 @@ Jonathan Bullock
 :jbake-tags: blog, asciidoc
 :idprefix:
 
-Being a Java and (sometimes) Scala developer on a daily basis I have thought to give it a try and take a look beyond my own nose. Thus I have been attented the https://www.euroscipy.org/2016/program/[EuroSciPy Conference 2016].
+Being a Java and (sometimes) Scala developer on a daily basis I have thought to give it a try and take a look beyond my own nose. Thus I have been attended the https://www.euroscipy.org/2016/program/[EuroSciPy Conference 2016].
 
 These are some talks I really enjoyed and seem worthy of mention:
 
