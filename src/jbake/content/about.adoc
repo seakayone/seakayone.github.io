@@ -19,3 +19,4 @@ Page was build using the following components:
 * http://asciidoctor.org/[AsciidoctorJ]
 * http://foundation.zurb.com/[Foundation]
 * https://github.com/google/code-prettify/[Prettify.js] with https://cdn.rawgit.com/google/code-prettify/master/styles/index.html#sunburst[Sunburst theme]
+* http://www.groovy-lang.org/[Groovy]
