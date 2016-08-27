@@ -12,9 +12,10 @@ Page was build using the following components:
 
 * https://gradle.org/[Gradle]
 * http://jbake.org/[Jbake]
-* http://www.thymeleaf.org/[Thymeleaf]
-* http://asciidoctor.org/[Asciidoctor]
 * https://github.com/jbake-org/jbake-gradle-plugin[Jbake Gradle Plugin]
 * https://github.com/robfletcher/gradle-compass[Compass Gradle Plugin] (using http://compass-style.org/[Compass] and http://jruby.org/[JRuby])
+* https://github.com/ajoberstar/gradle-git[Gradle Git and Github plugin]
+* http://www.thymeleaf.org/[Thymeleaf]
+* http://asciidoctor.org/[AsciidoctorJ]
 * http://foundation.zurb.com/[Foundation]
 * https://github.com/google/code-prettify/[Prettify.js] with https://cdn.rawgit.com/google/code-prettify/master/styles/index.html#sunburst[Sunburst theme]
