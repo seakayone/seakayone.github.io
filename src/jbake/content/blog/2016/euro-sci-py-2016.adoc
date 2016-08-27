@@ -1,0 +1,16 @@
+= EuroSciPy Conference 2016
+Jonathan Bullock
+2016-01-17
+:jbake-type: post
+:jbake-status: published
+:jbake-tags: blog, asciidoc
+:idprefix:
+
+Being a Java and (sometimes) Scala developer on a daily basis I have thought to give it a try and take a look beyond my own nose. Thus I have been attented the https://www.euroscipy.org/2016/program/[EuroSciPy Conference 2016].
+
+These are some talks I really enjoyed and seem worthy of mention:
+
+* http://gael-varoquaux.info/[Gael Varoquaux]: Writing Code for Science
+* http://www2.mpia-hd.mpg.de/~robitaille/[Thomas Robitaille]: https://www.euroscipy.org/2016/schedule/sessions/25/[Interactive multi-dimensional data exploration and linking with Glue]
+* http://ogrisel.com/[Olivier Grisel]: https://www.euroscipy.org/2016/schedule/sessions/21/[Cluster Computing with Docker]
+* Holger Peters: https://www.euroscipy.org/2016/schedule/sessions/30/[Data Science, Python and the Functional Programming Revolution]
