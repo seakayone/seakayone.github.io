@@ -13,7 +13,6 @@
 
     <div class="row" id="content">
       <div class="medium-8 medium-offset-2 columns end">
-        <p><em th:text='${#dates.format(content.date,"dd MMMM yyyy")}'>date</em></p>
         <p th:utext='${content.body}'>body</p>
       </div>
     </div>
