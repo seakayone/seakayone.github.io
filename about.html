@@ -51,36 +51,114 @@
 <div class="ulist">
 <ul>
 <li>
-<p><a href="https://gradle.org/">Gradle</a></p>
+<p><a href="https://gradle.org/">Gradle</a> - Build automization</p>
+<div class="ulist">
+<ul>
+<li>
+<p>This is the glue which lets me automize everything. I am lazy and I do not want to maintain any local installation in order to be able to publish on my blog. The only requirement that this project has is a <a href="https://www.java.com/">JVM</a>.</p>
+</li>
+</ul>
+</div>
 </li>
 <li>
-<p><a href="http://jbake.org/">Jbake</a></p>
+<p><a href="http://jbake.org/">Jbake</a> - Static site/blog generator</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The actual workhorse, it collects my content and generates the complete site using the Thymeleaf templating engine and Asciidoctorj to transform my *.adoc content into html.</p>
+</li>
+</ul>
+</div>
 </li>
 <li>
 <p><a href="https://github.com/jbake-org/jbake-gradle-plugin">Jbake Gradle Plugin</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Allows me to use jbake from gradle.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="http://www.thymeleaf.org/">Thymeleaf</a> - Templating Engine</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Basically this is pure html with some additional attributes which allow Jbake to render the whole site.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="http://foundation.zurb.com/">Foundation</a> - Frontend Framework</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The base for the layout of this pages, provides a nice grid and some funky look. All CSS is written in <a href="http://sass-lang.com/">SASS</a>.</p>
+</li>
+</ul>
+</div>
 </li>
 <li>
 <p><a href="https://github.com/robfletcher/gradle-compass">Compass Gradle Plugin</a> (using <a href="http://compass-style.org/">Compass</a> and <a href="http://jruby.org/">JRuby</a>)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>This plugin takes care that I do not need to install any Sass Compile. It utilizes JRuby and installs the compass gem which then renders all *.scss into proper CSS.</p>
+</li>
+</ul>
+</div>
 </li>
 <li>
-<p><a href="https://github.com/ajoberstar/gradle-git">Gradle Git and Github plugin</a></p>
+<p><a href="https://github.com/ajoberstar/gradle-git">Gradle Git and Github plugin</a> - Publishing on GitHub pages</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Nice plugin which allows me to use Gradle as the publishing tool for the <a href="https://pages.github.com/">GitHub pages</a>.</p>
+</li>
+</ul>
+</div>
 </li>
 <li>
-<p><a href="http://www.thymeleaf.org/">Thymeleaf</a></p>
-</li>
+<p><a href="https://github.com/asciidoctor/asciidoctorj">AsciidoctorJ</a> - Simple markup for the content</p>
+<div class="ulist">
+<ul>
 <li>
-<p><a href="http://asciidoctor.org/">AsciidoctorJ</a></p>
+<p>All content is written in AsciiDoc[<a href="http://asciidoctor.org/docs/what-is-asciidoc/" class="bare">http://asciidoctor.org/docs/what-is-asciidoc/</a>]. I like AsciiDoc, a  lightweight markup language, because the markup is quite simple and the content still readable. The Java implementation has a very good Gradle and Jbake integration.</p>
 </li>
-<li>
-<p><a href="http://foundation.zurb.com/">Foundation</a></p>
+</ul>
+</div>
 </li>
 <li>
 <p><a href="https://github.com/google/code-prettify/">Prettify.js</a> with <a href="https://cdn.rawgit.com/google/code-prettify/master/styles/index.html#sunburst">Sunburst theme</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Automatically allow code to be styled and syntax highlighted using JavaScript</p>
+</li>
+</ul>
+</div>
 </li>
 <li>
 <p><a href="http://www.groovy-lang.org/">Groovy</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Used by Gradle and also for starting a local web server when writing new content for the pages</p>
 </li>
 </ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="sources">Sources</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Find the sources of this blog on <a href="https://github.com/seakayone/blog">GitHub</a></p>
 </div>
 </div>
 </div></p>
