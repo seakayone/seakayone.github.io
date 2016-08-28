@@ -10,35 +10,35 @@ Jonathan Bullock
 == Technology
 Page was build using the following components:
 
-* https://gradle.org/[Gradle] - Build automization
-** This is the glue which lets me automize everything. I am lazy and I do not want to maintain any local installation in order to be able to publish on my blog. The only requirement that this project has is a https://www.java.com/[JVM].
+* https://gradle.org/[Gradle] - Build automization +
+This is the glue which lets me automize everything. I am lazy and I do not want to maintain any local installation in order to be able to publish on my blog. The only requirement that this project has is a https://www.java.com/[JVM].
 
-* http://jbake.org/[Jbake] - Static site/blog generator
-** The actual workhorse, it collects my content and generates the complete site using the Thymeleaf templating engine and AsciidoctorJ to transform my *.adoc content into html.
+* http://jbake.org/[Jbake] - Static site/blog generator +
+The actual workhorse, it collects my content and generates the complete site using the Thymeleaf templating engine and AsciidoctorJ to transform my *.adoc content into html.
 
-* https://github.com/jbake-org/jbake-gradle-plugin[Jbake Gradle Plugin]
-** Allows me to use jbake from gradle.
+* https://github.com/jbake-org/jbake-gradle-plugin[Jbake Gradle Plugin] +
+Allows me to use jbake from gradle.
 
-* http://www.thymeleaf.org/[Thymeleaf] - Templating Engine
-** Basically this is pure html with some additional attributes which allow Jbake to render the whole site.
+* http://www.thymeleaf.org/[Thymeleaf] - Templating Engine +
+Basically this is pure html with some additional attributes which allow Jbake to render the whole site.
 
-* http://foundation.zurb.com/[Foundation] - Frontend Framework
-** The base for the layout of this pages, provides a nice grid and some funky look. All CSS is written in http://sass-lang.com/[SASS].
+* http://foundation.zurb.com/[Foundation] - Frontend Framework +
+The base for the layout of this pages, provides a nice grid and some funky look. All CSS is written in http://sass-lang.com/[SASS].
 
-* https://github.com/robfletcher/gradle-compass[Compass Gradle Plugin] (using http://compass-style.org/[Compass] and http://jruby.org/[JRuby])
-** This plugin takes care that I do not need to install any Sass Compile. It utilizes JRuby and installs the compass gem which then renders all *.scss into proper CSS.
+* https://github.com/robfletcher/gradle-compass[Compass Gradle Plugin] (using http://compass-style.org/[Compass] and http://jruby.org/[JRuby]) +
+This plugin takes care that I do not need to install any Sass Compile. It utilizes JRuby and installs the compass gem which then renders all *.scss into proper CSS.
 
-* https://github.com/ajoberstar/gradle-git[Gradle Git and Github plugin] - Publishing on GitHub pages
-** Nice plugin which allows me to use Gradle as the publishing tool for the https://pages.github.com/[GitHub pages].
+* https://github.com/ajoberstar/gradle-git[Gradle Git and Github plugin] - Publishing on GitHub pages +
+Nice plugin which allows me to use Gradle as the publishing tool for the https://pages.github.com/[GitHub pages].
 
-* https://github.com/asciidoctor/asciidoctorj[AsciidoctorJ] - Simple markup for the content
-** All content is written in http://asciidoctor.org/docs/what-is-asciidoc/[AsciiDoc]. I like AsciiDoc, a  lightweight markup language, because the markup is quite simple and the content still readable. The Java implementation has a very good Gradle and Jbake integration.
+* https://github.com/asciidoctor/asciidoctorj[AsciidoctorJ] - Simple markup for the content +
+All content is written in http://asciidoctor.org/docs/what-is-asciidoc/[AsciiDoc]. I like AsciiDoc, a  lightweight markup language, because the markup is quite simple and the content still readable. The Java implementation has a very good Gradle and Jbake integration.
 
-* https://github.com/google/code-prettify/[Prettify.js] with https://cdn.rawgit.com/google/code-prettify/master/styles/index.html#sunburst[Sunburst theme]
-** Automatically allow code to be styled and syntax highlighted using JavaScript
+* https://github.com/google/code-prettify/[Prettify.js] with https://cdn.rawgit.com/google/code-prettify/master/styles/index.html#sunburst[Sunburst theme] +
+Automatically allow code to be styled and syntax highlighted using JavaScript
 
-* http://www.groovy-lang.org/[Groovy]
-** Used by Gradle and also for starting a local web server when writing new content for the pages
+* http://www.groovy-lang.org/[Groovy] +
+Used by Gradle and also for starting a local web server when writing new content for the pages
 
 == Sources
 Find the sources of this blog on https://github.com/seakayone/blog[GitHub]
