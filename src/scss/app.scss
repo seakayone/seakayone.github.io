@@ -11,8 +11,8 @@
 @include foundation-button;
 @include foundation-forms;
 // @include foundation-range-input;
-@include foundation-accordion;
-@include foundation-accordion-menu;
+// @include foundation-accordion;
+// @include foundation-accordion-menu;
 @include foundation-badge;
 @include foundation-breadcrumbs;
 @include foundation-button-group;
@@ -45,3 +45,23 @@
 @include foundation-visibility-classes;
 @include foundation-float-classes;
 // @include foundation-flex-classes;
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  font-weight: bold;
+}
+
+
+a h1:hover,
+a h2:hover,
+a h3:hover,
+a h4:hover,
+a h5:hover,
+a h6:hover {
+  text-decoration: underline;
+}
