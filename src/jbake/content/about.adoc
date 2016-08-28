@@ -40,5 +40,8 @@ Automatically allow code to be styled and syntax highlighted using JavaScript.
 * http://www.groovy-lang.org/[Groovy] +
 Used by Gradle and also for starting a local web server when writing new content for the pages.
 
+* https://github.com/silktide/cookieconsent2/tree/master/styles[Cookie Consent JS] +
+The stupid EU cookie law…
+
 == Sources
 Find the sources of this blog on https://github.com/seakayone/blog[GitHub].

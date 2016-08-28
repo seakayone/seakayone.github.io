@@ -12,6 +12,11 @@
       <!-- Le styles -->
       <link th:with="rootpath=(${content.rootpath != null} ? ${content.rootpath} : '')" th:href="${rootpath}+'css/app.css'" rel="stylesheet"/>
       <link th:with="rootpath=(${content.rootpath != null} ? ${content.rootpath} : '')" rel="shortcut icon" th:href="${rootpath}+'favicon.ico'"/>
-
+      <!-- Begin Cookie Consent -->
+      <script type="text/javascript">
+          window.cookieconsent_options = {"message":"This blog uses cookies to ensure you get the best experience on our website","dismiss":"Got it!","learnMore":"More info","link":null,"theme":"dark-bottom"};
+      </script>
+      <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.10/cookieconsent.min.js"></script>
+      <!-- End Cookie Consent plugin -->
   </head>
 </html>
