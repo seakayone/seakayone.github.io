@@ -5,7 +5,7 @@ buildscript {
   }
   dependencies {
     classpath 'me.champeau.gradle:jbake-gradle-plugin:0.2'
-    classpath 'org.jbake:jbake-core:2.4.0'
+    classpath 'co.there4.jbake:jbake-core:2.5.0'
     classpath 'org.freemarker:freemarker:2.3.19'
     classpath 'org.asciidoctor:asciidoctorj:1.5.4'
     classpath 'org.pegdown:pegdown:1.5.0'
