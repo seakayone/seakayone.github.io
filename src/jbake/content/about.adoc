@@ -32,7 +32,7 @@ Page was build using the following components:
 ** Nice plugin which allows me to use Gradle as the publishing tool for the https://pages.github.com/[GitHub pages].
 
 * https://github.com/asciidoctor/asciidoctorj[AsciidoctorJ] - Simple markup for the content
-** All content is written in AsciiDoc[http://asciidoctor.org/docs/what-is-asciidoc/]. I like AsciiDoc, a  lightweight markup language, because the markup is quite simple and the content still readable. The Java implementation has a very good Gradle and Jbake integration.
+** All content is written in http://asciidoctor.org/docs/what-is-asciidoc/[AsciiDoc]. I like AsciiDoc, a  lightweight markup language, because the markup is quite simple and the content still readable. The Java implementation has a very good Gradle and Jbake integration.
 
 * https://github.com/google/code-prettify/[Prettify.js] with https://cdn.rawgit.com/google/code-prettify/master/styles/index.html#sunburst[Sunburst theme]
 ** Automatically allow code to be styled and syntax highlighted using JavaScript
