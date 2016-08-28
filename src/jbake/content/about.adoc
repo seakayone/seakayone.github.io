@@ -35,10 +35,10 @@ Nice plugin which allows me to use Gradle as the publishing tool for the https:/
 All content is written in http://asciidoctor.org/docs/what-is-asciidoc/[AsciiDoc]. I like AsciiDoc, a  lightweight markup language, because the markup is quite simple and the content still readable. The Java implementation has a very good Gradle and Jbake integration.
 
 * https://github.com/google/code-prettify/[Prettify.js] with https://cdn.rawgit.com/google/code-prettify/master/styles/index.html#sunburst[Sunburst theme] +
-Automatically allow code to be styled and syntax highlighted using JavaScript
+Automatically allow code to be styled and syntax highlighted using JavaScript.
 
 * http://www.groovy-lang.org/[Groovy] +
-Used by Gradle and also for starting a local web server when writing new content for the pages
+Used by Gradle and also for starting a local web server when writing new content for the pages.
 
 == Sources
-Find the sources of this blog on https://github.com/seakayone/blog[GitHub]
+Find the sources of this blog on https://github.com/seakayone/blog[GitHub].
