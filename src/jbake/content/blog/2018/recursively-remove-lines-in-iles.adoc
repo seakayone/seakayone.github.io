@@ -1,0 +1,19 @@
+= Recursively Remove Lines in Files
+Jonathan Bullock
+2018-05-20
+:jbake-type: post
+:jbake-status: published
+:jbake-tags: blog, asciidoc
+:idprefix:
+
+
+Sometimes you would like to delete all lines containing a certain `KEYWORD` word for all files contained in a folder all of it child folders.
+
+When using macOs you can simply do the following:
+
+  find . -type f -iname "*.properties" -print0|xargs -0 sed -i '' /KEYWORD/d
+
+
+The parameter `-iname "*.properties` will only take files with the ending `properties` into account.
+
+Have a look on the https://superuser.com/questions/445514/finding-and-deleting-lines-from-all-files-recursively[related topic on Stackoverflow] where you can find alternatives for `zsh` and GNU sed.
