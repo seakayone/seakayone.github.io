@@ -1,24 +1,23 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
-
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-      <meta charset="utf-8" />
+      <meta charset="utf-8"/>
       <title>About</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="description" content="" />
-      <meta name="author" content="" />
-      <meta name="keywords" content="" />
-      <meta name="generator" content="JBake" />
+      <meta name="description" content=""/>
+      <meta name="author" content=""/>
+      <meta name="keywords" content=""/>
+      <meta name="generator" content="JBake"/>
 
       <!-- Le styles -->
-      <link rel="stylesheet" href="css/app.css" />
-      <link rel="shortcut icon" href="favicon.ico" />
+      <link href="css/app.css" rel="stylesheet"/>
+      <link rel="shortcut icon" href="favicon.ico"/>
       <!-- Begin Cookie Consent -->
-      <script type="text/javascript" xml:space="preserve">
+      <script type="text/javascript">
           window.cookieconsent_options = {"message":"This blog uses cookies to ensure you get the best experience on our website","dismiss":"Got it!","learnMore":"More info","link":null,"theme":"dark-bottom"};
       </script>
-      <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.10/cookieconsent.min.js" xml:space="preserve"></script>
+      <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.10/cookieconsent.min.js"></script>
       <!-- End Cookie Consent plugin -->
   </head>
   <body>
@@ -27,14 +26,14 @@
         <ul class="menu">
           <li class="menu-text"><span class="has-tip" title="[sɪst'ɛmɪk] pertaining to or affecting a system as a whole" aria-haspopup="true">Systemic</span> Noise</li>
 
-          <li><a shape="rect" href="index.html">Home</a></li>
-          <li><a shape="rect" href="about.html">About</a></li>
-          <li><a shape="rect" href="archive.html">Archive</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="archive.html">Archive</a></li>
         </ul>
       </div>
       <div class="title-bar-right hide-for-small-only">
         <ul class="menu">
-          <li><a shape="rect" href="feed.xml">feed.xml</a></li>
+          <li><a href="feed.xml">feed.xml</a></li>
         </ul>
       </div>
     </div>
@@ -47,83 +46,50 @@
 
     <div class="row" id="content">
       <div class="medium-8 medium-offset-2 columns end">
-        <p><div class="sect1">
-<h2 id="technology">Technology</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Page was build using the following components:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://gradle.org/">Gradle</a> - Build automization<br>
-This is the glue which lets me automize everything. I am lazy and I do not want to maintain any local installation in order to be able to publish on my blog. The only requirement that this project has is a <a href="https://www.java.com/">JVM</a>.</p>
-</li>
-<li>
-<p><a href="http://jbake.org/">Jbake</a> - Static site/blog generator<br>
-The actual workhorse, it collects my content and generates the complete site using the Thymeleaf templating engine and AsciidoctorJ to transform my *.adoc content into html.</p>
-</li>
-<li>
-<p><a href="https://github.com/jbake-org/jbake-gradle-plugin">Jbake Gradle Plugin</a><br>
-Allows me to use jbake from gradle.</p>
-</li>
-<li>
-<p><a href="http://www.thymeleaf.org/">Thymeleaf</a> - Templating Engine<br>
-Basically this is pure html with some additional attributes which allow Jbake to render the whole site.</p>
-</li>
-<li>
-<p><a href="http://foundation.zurb.com/">Foundation</a> - Frontend Framework<br>
-The base for the layout of this pages, provides a nice grid and some funky look. All CSS is written in <a href="http://sass-lang.com/">SASS</a>.</p>
-</li>
-<li>
-<p><a href="https://github.com/robfletcher/gradle-compass">Compass Gradle Plugin</a> (using <a href="http://compass-style.org/">Compass</a> and <a href="http://jruby.org/">JRuby</a>)<br>
-This plugin takes care that I do not need to install any Sass compiler. It utilizes JRuby and installs the compass gem which then renders all *.scss into proper CSS.</p>
-</li>
-<li>
-<p><a href="https://github.com/ajoberstar/gradle-git">Gradle Git and Github plugin</a> - Publishing on GitHub pages<br>
-Nice plugin which allows me to use Gradle as the publishing tool for the <a href="https://pages.github.com/">GitHub pages</a>.</p>
-</li>
-<li>
-<p><a href="https://github.com/asciidoctor/asciidoctorj">AsciidoctorJ</a> - Simple markup for the content<br>
-All content is written in <a href="http://asciidoctor.org/docs/what-is-asciidoc/">AsciiDoc</a>. I like AsciiDoc, a  lightweight markup language, because the markup is quite simple and the content still readable. The Java implementation has a very good Gradle and Jbake integration.</p>
-</li>
-<li>
-<p><a href="https://github.com/google/code-prettify/">Prettify.js</a> with <a href="https://cdn.rawgit.com/google/code-prettify/master/styles/index.html#sunburst">Sunburst theme</a><br>
-Automatically allow code to be styled and syntax highlighted using JavaScript.</p>
-</li>
-<li>
-<p><a href="http://www.groovy-lang.org/">Groovy</a><br>
-Used by Gradle and also for starting a local web server when writing new content for the pages.</p>
-</li>
-<li>
-<p><a href="https://github.com/silktide/cookieconsent2/tree/master/styles">Cookie Consent JS</a><br>
-The stupid EU cookie law…</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="sources">Sources</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Find the sources of this blog on <a href="https://github.com/seakayone/blog">GitHub</a>.</p>
-</div>
-</div>
+        <p><div class="sect1"> 
+ <h2 id="technology">Technology</h2> 
+ <div class="sectionbody"> 
+  <div class="paragraph"> 
+   <p>Page was build using the following components:</p> 
+  </div> 
+  <div class="ulist"> 
+   <ul> 
+    <li> <p><a href="https://gradle.org/">Gradle</a> - Build automization<br> This is the glue which lets me automize everything. I am lazy and I do not want to maintain any local installation in order to be able to publish on my blog. The only requirement that this project has is a <a href="https://www.java.com/">JVM</a>.</p> </li> 
+    <li> <p><a href="http://jbake.org/">Jbake</a> - Static site/blog generator<br> The actual workhorse, it collects my content and generates the complete site using the Thymeleaf templating engine and AsciidoctorJ to transform my *.adoc content into html.</p> </li> 
+    <li> <p><a href="https://github.com/jbake-org/jbake-gradle-plugin">Jbake Gradle Plugin</a><br> Allows me to use jbake from gradle.</p> </li> 
+    <li> <p><a href="http://www.thymeleaf.org/">Thymeleaf</a> - Templating Engine<br> Basically this is pure html with some additional attributes which allow Jbake to render the whole site.</p> </li> 
+    <li> <p><a href="http://foundation.zurb.com/">Foundation</a> - Frontend Framework<br> The base for the layout of this pages, provides a nice grid and some funky look. All CSS is written in <a href="http://sass-lang.com/">SASS</a>.</p> </li> 
+    <li> <p><a href="https://github.com/robfletcher/gradle-compass">Compass Gradle Plugin</a> (using <a href="http://compass-style.org/">Compass</a> and <a href="http://jruby.org/">JRuby</a>)<br> This plugin takes care that I do not need to install any Sass compiler. It utilizes JRuby and installs the compass gem which then renders all *.scss into proper CSS.</p> </li> 
+    <li> <p><a href="https://github.com/ajoberstar/gradle-git">Gradle Git and Github plugin</a> - Publishing on GitHub pages<br> Nice plugin which allows me to use Gradle as the publishing tool for the <a href="https://pages.github.com/">GitHub pages</a>.</p> </li> 
+    <li> <p><a href="https://github.com/asciidoctor/asciidoctorj">AsciidoctorJ</a> - Simple markup for the content<br> All content is written in <a href="http://asciidoctor.org/docs/what-is-asciidoc/">AsciiDoc</a>. I like AsciiDoc, a lightweight markup language, because the markup is quite simple and the content still readable. The Java implementation has a very good Gradle and Jbake integration.</p> </li> 
+    <li> <p><a href="https://github.com/google/code-prettify/">Prettify.js</a> with <a href="https://cdn.rawgit.com/google/code-prettify/master/styles/index.html#sunburst">Sunburst theme</a><br> Automatically allow code to be styled and syntax highlighted using JavaScript.</p> </li> 
+    <li> <p><a href="http://www.groovy-lang.org/">Groovy</a><br> Used by Gradle and also for starting a local web server when writing new content for the pages.</p> </li> 
+    <li> <p><a href="https://github.com/silktide/cookieconsent2/tree/master/styles">Cookie Consent JS</a><br> The stupid EU cookie law…</p> </li> 
+   </ul> 
+  </div> 
+ </div> 
+</div> 
+<div class="sect1"> 
+ <h2 id="sources">Sources</h2> 
+ <div class="sectionbody"> 
+  <div class="paragraph"> 
+   <p>Find the sources of this blog on <a href="https://github.com/seakayone/blog">GitHub</a>.</p> 
+  </div> 
+ </div> 
 </div></p>
       </div>
     </div>
     <div>
       <div class="row column">
         <ul class="menu">
-          <li><a href="#" shape="rect">Top</a></li>
+          <li><a href="#">Top</a></li>
         </ul>
       </div>
-      <script xml:space="preserve" src="js/jquery.js"></script>
-      <script xml:space="preserve" src="js/foundation.min.js"></script>
-      <script xml:space="preserve" src="js/prettify.js"></script>
-      <script xml:space="preserve" src="js/app.js"></script>
-      <script xml:space="preserve">
+      <script src="js/jquery.js"></script>
+      <script src="js/foundation.min.js"></script>
+      <script src="js/prettify.js"></script>
+      <script src="js/app.js"></script>
+      <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
