@@ -4,36 +4,27 @@ buildscript {
     maven { url "http://dl.bintray.com/robfletcher/gradle-plugins" }
   }
   dependencies {
-    classpath 'me.champeau.gradle:jbake-gradle-plugin:0.2'
-    classpath 'co.there4.jbake:jbake-core:2.5.0'
-    classpath 'org.freemarker:freemarker:2.3.19'
-    classpath 'org.asciidoctor:asciidoctorj:1.5.4'
-    classpath 'org.pegdown:pegdown:1.5.0'
-    classpath 'org.thymeleaf:thymeleaf:2.1.3.RELEASE'
-    classpath 'org.thymeleaf.extras:thymeleaf-extras-conditionalcomments:2.1.1.RELEASE'
     classpath "com.github.robfletcher:compass-gradle-plugin:2.0.5"
   }
 }
 
+plugins {
+  id 'org.jbake.site' version '1.2.0'
+}
+
 apply plugin: "com.github.robfletcher.compass"
-apply plugin: 'me.champeau.jbake'
 
 compass {
   cssDir = file("src/jbake/assets/css")
   sassDir = file("src/scss")
 }
 
-jbake.dependsOn compassCompile
+bake.dependsOn compassCompile
 
-jbake {
-  input = file 'src/jbake'
-  clearCache = true
-}
-
-task publish(dependsOn: 'jbake', type: GradleBuild) {
+task publish(dependsOn: 'bake', type: GradleBuild) {
   System.setProperty('jna.nosys', 'true')
   buildFile = 'publish.gradle'
   tasks = ['publishGhPages']
 }
 
-wrapper.gradleVersion = '3.0'
+wrapper.gradleVersion = '4.7'
