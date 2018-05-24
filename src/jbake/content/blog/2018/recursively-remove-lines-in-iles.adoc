@@ -1,9 +1,9 @@
 = Recursively Remove Lines in Files
-Jonathan Bullock
+Christian Kleinbölting
 2018-05-20
 :jbake-type: post
 :jbake-status: published
-:jbake-tags: blog, asciidoc
+:jbake-tags: blog, shell, sed, microblog
 :idprefix:
 
 
