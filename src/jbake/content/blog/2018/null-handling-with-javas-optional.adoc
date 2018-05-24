@@ -20,7 +20,7 @@ if (foo != null) {
 }
 --
 
-Using Java 8's `Optional<T>` type and method references we could simplified the above code to look like this:
+Using Java 8's `Optional<T>` type and method references we could simplify the above code to look like this:
 
 [source, java]
 --
@@ -29,7 +29,7 @@ someMethodWhichReturnsOptionalFoo()
   .ifPresent(Bar::doBaz);
 --
 
-IMHO this would make the code not only shorter but also easier to read. The `Optional` seems to sooth our pain. Essentially `Optional` models the behaviour that a value can be present or absent and this way provides certain operations on which will be executed if and only if the value is present seemingly making the dreaded `NullPointerException` vanish.
+IMHO this would make the code not only shorter but also easier to read. The `Optional` seems to sooth our pain. Essentially `Optional` models the behaviour that a value can be present or absent and this way provides certain operations which will be executed if and only if the value is present seemingly making the dreaded `NullPointerException` vanish.
 
 All good, right? This should allow us to write better code in terms of readability and null safeness. Not entirely: Unfortunately Java still allows to return null for any method. This means that even methods with a return value of `Optional` can actually return `null`. In the example above for example if the `getBarOptional` method returns `null` we would get a `NullPointerException` from the `flatMap` as this (admittedly awkwardly) requires the return value to be not `null`.
 
