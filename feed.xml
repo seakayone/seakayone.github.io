@@ -1,17 +1,58 @@
 <?xml version="1.0"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Systemic Noise</title>
-    <link>http://jbake.org</link>link</link>
-    <atom:link href="http://jbake.org/feed.xml" rel="self" type="application/rss+xml" />
+    <title>Systemic Blog</title>
+    <link >http://seakayone.github.io</link>
+    <atom:link href="http://seakayone.github.io/feed.xml" rel="self" type="application/rss+xml" />
     <description>Blog about software handicraft and engineering</description>
     <language>en-gb</language>
-    <pubDate>Tue, 22 May 2018 23:30:50 +0200</pubDate>
-    <lastBuildDate>Tue, 22 May 2018 23:30:50 +0200</lastBuildDate>
+    <pubDate>Fri, 25 May 2018 00:02:25 +0200</pubDate>
+    <lastBuildDate>Fri, 25 May 2018 00:02:25 +0200</lastBuildDate>
 
     <item>
+      <title>Java: Null Handling with Optional</title>
+      <link >http://seakayone.github.io/blog/2018/null-handling-with-javas-optional.html</link>
+      <pubDate>Thu, 24 May 2018 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">blog/2018/null-handling-with-javas-optional.html</guid>
+      <description>&amp;lt;div class=&amp;quot;paragraph&amp;quot;&amp;gt; 
+ &amp;lt;p&amp;gt;Java has made the multi-billion dollar mistake. Its creators decided it is a good idea to implement the &amp;lt;code&amp;gt;null&amp;lt;/code&amp;gt; reference. This reference leads developers having to deal a lot with unexpected behaviours and the ubiquitious &amp;lt;code&amp;gt;NullPointerException&amp;lt;/code&amp;gt;. The problem with &amp;lt;code&amp;gt;null&amp;lt;/code&amp;gt; is that it does not provide convenient ways to deal with its presence other than checking for its existence. Have you ever seen code with lots of nested if statements?&amp;lt;/p&amp;gt; 
+&amp;lt;/div&amp;gt; 
+&amp;lt;div class=&amp;quot;listingblock&amp;quot;&amp;gt; 
+ &amp;lt;div class=&amp;quot;content&amp;quot;&amp;gt; 
+  &amp;lt;pre class=&amp;quot;prettyprint highlight&amp;quot;&amp;gt;&amp;lt;code class=&amp;quot;language-java&amp;quot; data-lang=&amp;quot;java&amp;quot;&amp;gt;Foo foo = someMethodWhichReturnsFooOrNull();
+if (foo != null) {
+  Bar bar = foo.getBar(); // foo.getBar() returns Bar or null
+  if (bar != null) {
+    bar.doBaz();
+  }
+}&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt; 
+ &amp;lt;/div&amp;gt; 
+&amp;lt;/div&amp;gt; 
+&amp;lt;div class=&amp;quot;paragraph&amp;quot;&amp;gt; 
+ &amp;lt;p&amp;gt;Using Java 8’s &amp;lt;code&amp;gt;Optional&amp;amp;lt;T&amp;amp;gt;&amp;lt;/code&amp;gt; type and method references we could simplify the above code to look like this:&amp;lt;/p&amp;gt; 
+&amp;lt;/div&amp;gt; 
+&amp;lt;div class=&amp;quot;listingblock&amp;quot;&amp;gt; 
+ &amp;lt;div class=&amp;quot;content&amp;quot;&amp;gt; 
+  &amp;lt;pre class=&amp;quot;prettyprint highlight&amp;quot;&amp;gt;&amp;lt;code class=&amp;quot;language-java&amp;quot; data-lang=&amp;quot;java&amp;quot;&amp;gt;someMethodWhichReturnsOptionalFoo()
+  .flatMap(Foo::getBarOptional())
+  .ifPresent(Bar::doBaz);&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt; 
+ &amp;lt;/div&amp;gt; 
+&amp;lt;/div&amp;gt; 
+&amp;lt;div class=&amp;quot;paragraph&amp;quot;&amp;gt; 
+ &amp;lt;p&amp;gt;IMHO this would make the code not only shorter but also easier to read. The &amp;lt;code&amp;gt;Optional&amp;lt;/code&amp;gt; seems to sooth our pain. Essentially &amp;lt;code&amp;gt;Optional&amp;lt;/code&amp;gt; models the behaviour that a value can be present or absent and this way provides certain operations which will be executed if and only if the value is present seemingly making the dreaded &amp;lt;code&amp;gt;NullPointerException&amp;lt;/code&amp;gt; vanish.&amp;lt;/p&amp;gt; 
+&amp;lt;/div&amp;gt; 
+&amp;lt;div class=&amp;quot;paragraph&amp;quot;&amp;gt; 
+ &amp;lt;p&amp;gt;All good, right? This should allow us to write better code in terms of readability and null safeness. Not entirely: Unfortunately Java still allows to return null for any method. This means that even methods with a return value of &amp;lt;code&amp;gt;Optional&amp;lt;/code&amp;gt; can actually return &amp;lt;code&amp;gt;null&amp;lt;/code&amp;gt;. In the example above for example if the &amp;lt;code&amp;gt;getBarOptional&amp;lt;/code&amp;gt; method returns &amp;lt;code&amp;gt;null&amp;lt;/code&amp;gt; we would get a &amp;lt;code&amp;gt;NullPointerException&amp;lt;/code&amp;gt; from the &amp;lt;code&amp;gt;flatMap&amp;lt;/code&amp;gt; as this (admittedly awkwardly) requires the return value to be not &amp;lt;code&amp;gt;null&amp;lt;/code&amp;gt;.&amp;lt;/p&amp;gt; 
+&amp;lt;/div&amp;gt; 
+&amp;lt;div class=&amp;quot;paragraph&amp;quot;&amp;gt; 
+ &amp;lt;p&amp;gt;So we are back at square one leaving developers behind with only self-discipline and code. With &amp;lt;code&amp;gt;Optional&amp;lt;/code&amp;gt; the code will at least be more readable though.&amp;lt;/p&amp;gt; 
+&amp;lt;/div&amp;gt; 
+&amp;lt;div class=&amp;quot;paragraph&amp;quot;&amp;gt; 
+ &amp;lt;p&amp;gt;In a later article I will present a way how to statically analyse our code and ensuring that &amp;lt;code&amp;gt;null&amp;lt;/code&amp;gt; is never returned accidentally. I will also show how to use annotations to make it clearer for a developer that one has to deal with &amp;lt;code&amp;gt;null&amp;lt;/code&amp;gt;, making writing Java more like the Kotlin way of handling &amp;lt;code&amp;gt;null&amp;lt;/code&amp;gt; in that preventing the use of &amp;lt;code&amp;gt;null&amp;lt;/code&amp;gt; will become the default way of writing code.&amp;lt;/p&amp;gt; 
+&amp;lt;/div&amp;gt;</description>
+    </item><item>
       <title>Recursively Remove Lines in Files</title>
-      <link>http://jbake.org/blog/2018/recursively-remove-lines-in-iles.html</link>link</link>
+      <link >http://seakayone.github.io/blog/2018/recursively-remove-lines-in-iles.html</link>
       <pubDate>Sun, 20 May 2018 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">blog/2018/recursively-remove-lines-in-iles.html</guid>
       <description>&amp;lt;div class=&amp;quot;paragraph&amp;quot;&amp;gt; 
@@ -33,7 +74,7 @@
 &amp;lt;/div&amp;gt;</description>
     </item><item>
       <title>EuroSciPy Conference 2016</title>
-      <link>http://jbake.org/blog/2016/euro-sci-py-2016.html</link>link</link>
+      <link >http://seakayone.github.io/blog/2016/euro-sci-py-2016.html</link>
       <pubDate>Sat, 27 Aug 2016 00:00:00 +0200</pubDate>
       <guid isPermaLink="false">blog/2016/euro-sci-py-2016.html</guid>
       <description>&amp;lt;div class=&amp;quot;paragraph&amp;quot;&amp;gt; 

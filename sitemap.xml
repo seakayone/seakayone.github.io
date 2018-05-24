@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     <url>
-        <loc>http://jbake.org/about.html</loc>
+        <loc>http://seakayone.github.io/about.html</loc>
         <lastmod>2013-10-17</lastmod>
     </url><url>
-        <loc>http://jbake.org/blog/2018/recursively-remove-lines-in-iles.html</loc>
+        <loc>http://seakayone.github.io/blog/2018/null-handling-with-javas-optional.html</loc>
+        <lastmod>2018-05-24</lastmod>
+    </url><url>
+        <loc>http://seakayone.github.io/blog/2018/recursively-remove-lines-in-iles.html</loc>
         <lastmod>2018-05-20</lastmod>
     </url><url>
-        <loc>http://jbake.org/blog/2016/euro-sci-py-2016.html</loc>
+        <loc>http://seakayone.github.io/blog/2016/euro-sci-py-2016.html</loc>
         <lastmod>2016-08-27</lastmod>
     </url>
 </urlset>
