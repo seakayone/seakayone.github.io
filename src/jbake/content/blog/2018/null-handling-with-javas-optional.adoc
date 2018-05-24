@@ -1,0 +1,38 @@
+= Java: Null Handling with Optional
+Christian Kleinbölting
+2018-05-24
+:jbake-type: post
+:jbake-status: published
+:jbake-tags: java, optional, null
+:idprefix:
+
+Java has made the multi-billion dollar mistake. Its creators decided it is a good idea to implement the `null` reference. This reference leads developers having to deal a lot with unexpected behaviours and the ubiquitious `NullPointerException`. The problem with `null` is that it does not provide convenient ways to deal with its presence other than checking for its existence. Have you ever seen code with lots of nested if statements?
+
+
+[source, java]
+--
+Foo foo = someMethodWhichReturnsFooOrNull();
+if (foo != null) {
+  Bar bar = foo.getBar(); // foo.getBar() returns Bar or null
+  if (bar != null) {
+    bar.doBaz();
+  }
+}
+--
+
+Using Java 8's `Optional<T>` type and method references we could simplified the above code to look like this:
+
+[source, java]
+--
+someMethodWhichReturnsOptionalFoo()
+  .flatMap(Foo::getBarOptional())
+  .ifPresent(Bar::doBaz);
+--
+
+IMHO this would make the code not only shorter but also easier to read. The `Optional` seems to sooth our pain. Essentially `Optional` models the behaviour that a value can be present or absent and this way provides certain operations on which will be executed if and only if the value is present seemingly making the dreaded `NullPointerException` vanish.
+
+All good, right? This should allow us to write better code in terms of readability and null safeness. Not entirely: Unfortunately Java still allows to return null for any method. This means that even methods with a return value of `Optional` can actually return `null`. In the example above for example if the `getBarOptional` method returns `null` we would get a `NullPointerException` from the `flatMap` as this (admittedly awkwardly) requires the return value to be not `null`.
+
+So we are back at square one leaving developers behind with only self-discipline and code. With `Optional` the code will at least be more readable though.
+
+In a later article I will present a way how to statically analyse our code and ensuring that `null` is never returned accidentally. I will also show how to use annotations to make it clearer for a developer that one has to deal with `null`, making writing Java more like the Kotlin way of handling `null` in that preventing the use of `null` will become the default way of writing code.
