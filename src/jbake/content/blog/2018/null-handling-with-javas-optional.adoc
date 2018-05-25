@@ -6,7 +6,9 @@ Christian Kleinbölting
 :jbake-tags: java, optional, null
 :idprefix:
 
-Java has made the multi-billion dollar mistake. Its creators decided it is a good idea to implement the `null` reference. This reference leads developers having to deal a lot with unexpected behaviours and the ubiquitious `NullPointerException`. The problem with `null` is that it does not provide convenient ways to deal with its presence other than checking for its existence. Have you ever seen code with lots of nested if statements?
+Java has made https://www.infoq.com/presentations/Null-References-The-Billion-Dollar-Mistake-Tony-Hoare[the billion dollar mistake]. Its creators decided it is a good idea to implement the `null` reference. This reference leads developers having to deal a lot with unexpected behaviours and the ubiquitious `NullPointerException`. The problem with `null` is that it does not provide convenient ways to deal with its presence other than checking for its existence. This way it is subverting any type system, making the code hard to read and debug and possibly leads to bad design.
+
+Have you ever seen code with lots of nested if statements and cringed?
 
 
 [source, java]
