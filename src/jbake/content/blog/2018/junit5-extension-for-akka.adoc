@@ -3,7 +3,7 @@ Christian Kleinbölting
 2018-06-01
 :jbake-type: post
 :jbake-status: published
-:jbake-tags: blog, shell, sed, microblog
+:jbake-tags: blog, akka, junit-jupiter, testing
 :idprefix:
 
 For an existing project we are using https://akka.io/[Akka] with https://junit.org/junit5/[JUnit 5].
