@@ -1,0 +1,37 @@
+= A JUnit 5 Extension for testing Akka and Akka Streams
+Christian Kleinbölting
+2018-06-01
+:jbake-type: post
+:jbake-status: published
+:jbake-tags: blog, shell, sed, microblog
+:idprefix:
+
+For an existing project we are using https://akka.io/[Akka] with https://junit.org/junit5/[JUnit 5].
+
+Akka is an amazing toolkit which has an implementation of the actor model (https://doc.akka.io/docs/akka/current/guide/actors-motivation.html[akka-actors]) as well as the reactive streams (https://doc.akka.io/docs/akka/current/typed/stream.html#streams[akka-streams]) and already comes with a handy test kit as well. However for using the test kit you will still need to setup Akka components like `ActorSystem` or `ActorMaterializer` yourself. In order to make this a bit more convenient using JUnit I decided to create a small extension takes care of the lifecycle of those two components during test.
+
+https://junit.org/junit5/docs/current/user-guide/#extensions[JUnit 5 extensions] allow you to setup your testing harness. It provides certain hooks which are called https://junit.org/junit5/docs/current/user-guide/#extensions-lifecycle-callbacks[before, during and after the tests], your extension can use a context object in which it https://junit.org/junit5/docs/current/user-guide/#extensions-keeping-state[can store its state]. An extension can https://junit.org/junit5/docs/current/user-guide/#extensions-parameter-resolution[resolve test method parameters] effectively injecting the components it is managing into each test method.
+
+The little https://github.com/seakayone/akka-junit[`AkkaJunitExtension`] I have created can easily be used. The following test is a short demonstration of that:
+[source, java]
+--
+@ExtendWith(AkkaJunitExtension.class)
+@AkkaJunitExtensionConfig(name = "test")
+class SomeAkkaJunit5Test {
+
+    @Test
+    void system_is_present(ActorSystem system){
+        assertThat(system).isNotNull();
+    }
+
+    @Test
+    void system_has_name(ActorSystem system){
+        assertThat(system.name()).isEqualTo("test");
+    }
+
+    @Test
+    void actormaterializer_is_present(ActorMaterializer mat) {
+        assertThat(mat).isNotNull();
+    }
+}
+--
