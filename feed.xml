@@ -6,10 +6,50 @@
     <atom:link href="http://seakayone.github.io/feed.xml" rel="self" type="application/rss+xml" />
     <description>Blog about software handicraft and engineering</description>
     <language>en-gb</language>
-    <pubDate>Sat, 26 May 2018 01:46:33 +0200</pubDate>
-    <lastBuildDate>Sat, 26 May 2018 01:46:33 +0200</lastBuildDate>
+    <pubDate>Fri, 1 Jun 2018 18:43:51 +0200</pubDate>
+    <lastBuildDate>Fri, 1 Jun 2018 18:43:51 +0200</lastBuildDate>
 
     <item>
+      <title>A JUnit 5 Extension for testing Akka and Akka Streams</title>
+      <link >http://seakayone.github.io/blog/2018/junit5-extension-for-akka.html</link>
+      <pubDate>Fri, 1 Jun 2018 00:00:00 +0200</pubDate>
+      <guid isPermaLink="false">blog/2018/junit5-extension-for-akka.html</guid>
+      <description>&amp;lt;div class=&amp;quot;paragraph&amp;quot;&amp;gt; 
+ &amp;lt;p&amp;gt;For an existing project we are using &amp;lt;a href=&amp;quot;https://akka.io/&amp;quot;&amp;gt;Akka&amp;lt;/a&amp;gt; with &amp;lt;a href=&amp;quot;https://junit.org/junit5/&amp;quot;&amp;gt;JUnit 5&amp;lt;/a&amp;gt;.&amp;lt;/p&amp;gt; 
+&amp;lt;/div&amp;gt; 
+&amp;lt;div class=&amp;quot;paragraph&amp;quot;&amp;gt; 
+ &amp;lt;p&amp;gt;Akka is an amazing toolkit which has an implementation of the actor model (&amp;lt;a href=&amp;quot;https://doc.akka.io/docs/akka/current/guide/actors-motivation.html&amp;quot;&amp;gt;akka-actors&amp;lt;/a&amp;gt;) as well as the reactive streams (&amp;lt;a href=&amp;quot;https://doc.akka.io/docs/akka/current/typed/stream.html#streams&amp;quot;&amp;gt;akka-streams&amp;lt;/a&amp;gt;) and already comes with a handy test kit as well. However for using the test kit you will still need to setup Akka components like &amp;lt;code&amp;gt;ActorSystem&amp;lt;/code&amp;gt; or &amp;lt;code&amp;gt;ActorMaterializer&amp;lt;/code&amp;gt; yourself. In order to make this a bit more convenient using JUnit I decided to create a small extension takes care of the lifecycle of those two components during test.&amp;lt;/p&amp;gt; 
+&amp;lt;/div&amp;gt; 
+&amp;lt;div class=&amp;quot;paragraph&amp;quot;&amp;gt; 
+ &amp;lt;p&amp;gt;&amp;lt;a href=&amp;quot;https://junit.org/junit5/docs/current/user-guide/#extensions&amp;quot;&amp;gt;JUnit 5 extensions&amp;lt;/a&amp;gt; allow you to setup your testing harness. It provides certain hooks which are called &amp;lt;a href=&amp;quot;https://junit.org/junit5/docs/current/user-guide/#extensions-lifecycle-callbacks&amp;quot;&amp;gt;before, during and after the tests&amp;lt;/a&amp;gt;, your extension can use a context object in which it &amp;lt;a href=&amp;quot;https://junit.org/junit5/docs/current/user-guide/#extensions-keeping-state&amp;quot;&amp;gt;can store its state&amp;lt;/a&amp;gt;. An extension can &amp;lt;a href=&amp;quot;https://junit.org/junit5/docs/current/user-guide/#extensions-parameter-resolution&amp;quot;&amp;gt;resolve test method parameters&amp;lt;/a&amp;gt; effectively injecting the components it is managing into each test method.&amp;lt;/p&amp;gt; 
+&amp;lt;/div&amp;gt; 
+&amp;lt;div class=&amp;quot;paragraph&amp;quot;&amp;gt; 
+ &amp;lt;p&amp;gt;The little &amp;lt;a href=&amp;quot;https://github.com/seakayone/akka-junit&amp;quot;&amp;gt;&amp;lt;code&amp;gt;AkkaJunitExtension&amp;lt;/code&amp;gt;&amp;lt;/a&amp;gt; I have created can easily be used. The following test is a short demonstration of that:&amp;lt;/p&amp;gt; 
+&amp;lt;/div&amp;gt; 
+&amp;lt;div class=&amp;quot;listingblock&amp;quot;&amp;gt; 
+ &amp;lt;div class=&amp;quot;content&amp;quot;&amp;gt; 
+  &amp;lt;pre class=&amp;quot;prettyprint highlight&amp;quot;&amp;gt;&amp;lt;code class=&amp;quot;language-java&amp;quot; data-lang=&amp;quot;java&amp;quot;&amp;gt;@ExtendWith(AkkaJunitExtension.class)
+@AkkaJunitExtensionConfig(name = &amp;quot;test&amp;quot;)
+class SomeAkkaJunit5Test {
+
+    @Test
+    void system_is_present(ActorSystem system){
+        assertThat(system).isNotNull();
+    }
+
+    @Test
+    void system_has_name(ActorSystem system){
+        assertThat(system.name()).isEqualTo(&amp;quot;test&amp;quot;);
+    }
+
+    @Test
+    void actormaterializer_is_present(ActorMaterializer mat) {
+        assertThat(mat).isNotNull();
+    }
+}&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt; 
+ &amp;lt;/div&amp;gt; 
+&amp;lt;/div&amp;gt;</description>
+    </item><item>
       <title>Java: Null Handling with Optional</title>
       <link >http://seakayone.github.io/blog/2018/null-handling-with-javas-optional.html</link>
       <pubDate>Thu, 24 May 2018 00:00:00 +0200</pubDate>
