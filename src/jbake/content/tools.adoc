@@ -1,0 +1,60 @@
+= Tooling overview
+Christian Kleinbölting
+2020-05-24
+:jbake-type: page
+:jbake-status: published
+:jbake-tags: shell, sed, microblog
+:idprefix:
+
+== Live in the shell
+
+* http://zsh.sourceforge.net/[zsh]
+** https://github.com/ohmyzsh/ohmyzsh[Oh My Zsh]
+*** https://github.com/zsh-users/zsh-autosuggestions[Autosuggestions plugin]
+*** https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/history-substring-search[History substring search plugin]
+*** https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git[git plugin]
+*** https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/gitignore[gitignore plugin]
+*** https://github.com/ohmyzsh/ohmyzsh/blob/master/themes/nicoulaj.zsh-theme[Minimalistic Nicoulaj theme]
+* https://sdkman.io/[SDKMAN!]
+** https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/sdk[Oh My Zsh plugin]
+* https://brew.sh/[Homebrew]
+** https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/brew[Oh My Zsh plugin]
+* https://github.com/nvm-sh/nvm[Node Version Manager]
+** https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/nvm[Oh My Zsh plugin]
+* https://github.com/BurntSushi/ripgrep[ripgrep]
+** https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/ripgrep[Oh My Zsh plugin]
+* https://github.com/jakubroztocil/httpie[HTTPie]
+** https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/httpie[Oh My Zsh plugin]
+* https://github.com/wting/autojump[autojump]
+** https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/autojump[Oh My Zsh plugin]
+
+== Mac
+
+* https://github.com/Mortennn/Dozer[Dozer]
+* https://justgetflux.com/[f.lux]
+* [.line-through]#https://github.com/eczarny/spectacle#important-note[Spectacle]# => https://github.com/rxhanson/Rectangle[Rectangle]
+
+== Rest API
+
+* https://www.postman.com/[Postman]
+* https://insomnia.rest/[Insomnia Core & Designer]
+
+== IDE
+
+* https://www.jetbrains.com/de-de/idea/[IntelliJ IDEA]
+** https://github.com/JetBrains/ideavim[IdeaVIM plugin]
+** https://plugins.jetbrains.com/plugin/7414-relative-line-numbers[Relative Line Numbers plugin]
+** https://plugins.jetbrains.com/plugin/9792-key-promoter-x[Key Promoter X plugin]
+* https://code.visualstudio.com/[Visual Studio Code]
+
+== Docker && Kubernetes
+
+* https://docs.docker.com/docker-for-mac/[Docker Desktop for Mac]
+* https://github.com/ahmetb/kubectx[kubectx]
+* Oh My Zsh plugin: https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/docker[docker], https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/kubectl[kubectl]
+
+== Java
+
+* https://gradle.org/[gradle]
+** https://github.com/dougborg/gdub[gdub]
+** https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/gradle[Oh My Zsh plugin]

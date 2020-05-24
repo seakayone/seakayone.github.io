@@ -1,5 +1,5 @@
 = About
-Jonathan Bullock
+Christian Kleinbölting
 2013-10-17
 :jbake-type: page
 :jbake-status: published

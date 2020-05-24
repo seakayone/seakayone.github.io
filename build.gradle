@@ -1,30 +1,11 @@
-buildscript {
-  repositories {
-    jcenter()
-    maven { url "http://dl.bintray.com/robfletcher/gradle-plugins" }
-  }
-  dependencies {
-    classpath "com.github.robfletcher:compass-gradle-plugin:2.0.5"
-  }
-}
-
 plugins {
-  id 'org.jbake.site' version '1.2.0'
+    id "org.jbake.site" version "5.2.0"
 }
-
-apply plugin: "com.github.robfletcher.compass"
-
-compass {
-  cssDir = file("src/jbake/assets/css")
-  sassDir = file("src/scss")
-}
-
-bake.dependsOn compassCompile
 
 task publish(dependsOn: 'bake', type: GradleBuild) {
-  System.setProperty('jna.nosys', 'true')
-  buildFile = 'publish.gradle'
-  tasks = ['publishGhPages']
+    System.setProperty('jna.nosys', 'true')
+    buildFile = 'publish.gradle'
+    tasks = ['publishGhPages']
 }
 
-wrapper.gradleVersion = '4.7'
+wrapper.gradleVersion = '6.4.1'
