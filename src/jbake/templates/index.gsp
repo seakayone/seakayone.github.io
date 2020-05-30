@@ -12,7 +12,7 @@
         <p class="blog-post__content">${post.summary}</p>
 
         <p>
-            <a class="readMore" href="${content.rootpath}${post.uri}">read more &hellip;</a>
+            <a class="readMore" href="${content.rootpath}${post.uri}">Read more&hellip;</a>
         </p>
     </article>
     <% } %>
