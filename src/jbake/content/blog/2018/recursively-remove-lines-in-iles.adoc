@@ -11,7 +11,11 @@ Sometimes you would like to delete all lines containing a certain `KEYWORD` word
 
 When using macOs you can simply do the following:
 
-  find . -type f -iname "*.properties" -print0|xargs -0 sed -i '' /KEYWORD/d
+[source, shell]
+--
+  find . -type f -iname "*.properties" -print0| \
+  xargs -0 sed -i '' /KEYWORD/d
+--
 
 
 The parameter `-iname "*.properties` will only take files with the ending `properties` into account.

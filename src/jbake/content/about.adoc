@@ -22,12 +22,6 @@ Allows me to use jbake from gradle.
 * http://www.thymeleaf.org/[Thymeleaf] - Templating Engine +
 Basically this is pure html with some additional attributes which allow Jbake to render the whole site.
 
-* http://foundation.zurb.com/[Foundation] - Frontend Framework +
-The base for the layout of this pages, provides a nice grid and some funky look. All CSS is written in http://sass-lang.com/[SASS].
-
-* https://github.com/robfletcher/gradle-compass[Compass Gradle Plugin] (using http://compass-style.org/[Compass] and http://jruby.org/[JRuby]) +
-This plugin takes care that I do not need to install any Sass compiler. It utilizes JRuby and installs the compass gem which then renders all *.scss into proper CSS.
-
 * https://github.com/ajoberstar/gradle-git[Gradle Git and Github plugin] - Publishing on GitHub pages +
 Nice plugin which allows me to use Gradle as the publishing tool for the https://pages.github.com/[GitHub pages].
 

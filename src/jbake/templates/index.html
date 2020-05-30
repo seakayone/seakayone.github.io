@@ -1,28 +1,30 @@
 <!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
-  <head th:replace="header.html::head"/>
-  <body onload="prettyPrint()">
-    <div th:replace="menu.html::menu"/>
 
-    <div class="callout large primary" th:attr="data-interchange='[img/proxima/small.jpg, small], [img/proxima/medium.jpg, medium], [img/proxima/large.jpg, large]'">
-      <div class="row column text-center">
-        <h1 style="color:white">Blog</h1>
-      </div>
-    </div>
+<head th:replace="header.html::head"></head>
 
-    <div class="row" id="content">
-      <div class="medium-8 medium-offset-2 columns end">
-        <div th:each="post : ${published_posts}" class="blog-post" th:class="blog-post">
-          <a th:href='${post.uri}' href='href'><h3 th:text='${post.title}'>title</h3></a>
-          <p th:text='${#dates.format(post.date,"dd MMMM yyyy")}'>date</p>
-          <p th:utext='${post.body}'>body</p>
-        </div>
+<body onload="prettyPrint()">
 
-        <hr />
+<header th:replace="menu.html::menu"></header>
 
-        <p>Older posts are available in the <a th:href='${content.rootpath+config.archive_file}' href='href'>archive</a>.</p>
-      </div>
-    </div>
-    <div th:replace="footer.html::footer"/>
-  </body>
+<main>
+  <article th:each="post : ${published_posts}" class="blog-post blog-post__teaser">
+    <h1 class="blog-post__title">
+      <a th:href='${post.uri}' th:text='${post.title}' href='#'>title</a>
+    </h1>
+    <p class="blog-post__date" th:text='${#dates.format(post.date,"d MMMM yyyy")}'>date</p>
+    <p class="blog-post__content" th:utext='${post.body}'>body</p>
+  </article>
+</main>
+
+<!--<aside>-->
+<!--  <div>-->
+<!--    Older posts are available in the-->
+<!--    <a th:href='${content.rootpath+config.archive_file}' href="#">archive</a>.-->
+<!--  </div>-->
+<!--</aside>-->
+
+<footer th:replace="footer.html::footer"></footer>
+
+</body>
 </html>

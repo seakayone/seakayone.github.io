@@ -1,21 +1,20 @@
 <!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
-
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
-  <head th:replace="header.html::head"/>
-  <body>
-    <div th:replace="menu.html::menu"/>
 
-    <div class="callout large primary">
-      <div class="row column text-center">
-          <h1 th:text='${content.title}'>title</h1>
-      </div>
-    </div>
+<head th:replace="header.html::head"></head>
 
-    <div class="row" id="content">
-      <div class="medium-8 medium-offset-2 columns end">
-        <p th:utext='${content.body}'>body</p>
-      </div>
-    </div>
-    <div th:replace="footer.html::footer"/>
-  </body>
+<body>
+
+<header th:replace="menu.html::menu"></header>
+
+<main>
+  <article class="blog-post">
+    <h1 class="blog-post__title" th:text='${content.title}'>title</h1>
+    <p class="blog-post__content" th:utext='${content.body}'>body</p>
+  </article>
+</main>
+
+<footer th:replace="footer.html::footer"></footer>
+
+</body>
 </html>

@@ -1,22 +1,22 @@
 <!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
-  <body>
-    <div th:fragment="menu" class="title-bar">
-      <div class="title-bar-left">
-        <ul class="menu">
-          <li class="menu-text"><span class="has-tip" th:attr="data-tooltip='', aria-haspopup='true'" title="[sɪst'ɛmɪk] pertaining to or affecting a system as a whole">Systemic</span> Blog</li>
-          <li><a th:with="rootpath=(${content.rootpath != null} ? ${content.rootpath} : '')" th:href="${rootpath}+'index.html'">Home</a></li>
-          <li><a th:with="rootpath=(${content.rootpath != null} ? ${content.rootpath} : '')" th:href="${rootpath}+'about.html'">About</a></li>
-          <li><a th:with="rootpath=(${content.rootpath != null} ? ${content.rootpath} : '')" th:href="${rootpath}+'tools.html'">Tools</a></li>
-          <li><a th:with="rootpath=(${content.rootpath != null} ? ${content.rootpath} : '')" th:href="${rootpath}+'archive.html'">Archive</a></li>
-        </ul>
-      </div>
-      <div class="title-bar-right hide-for-small-only">
-        <ul class="menu">
-          <li><a th:with="rootpath=(${content.rootpath != null} ? ${content.rootpath} : '')" th:href="${rootpath}+${config.feed_file}">feed.xml</a></li>
-        </ul>
-      </div>
-    </div>
-  </body>
+<body>
+
+<header th:fragment="menu">
+  <nav class="nav">
+    <a class="nav__link"
+       th:with="rootpath=(${content.rootpath != null} ? ${content.rootpath} : '')"
+       th:href="${rootpath}+'index.html'">Blog</a>
+    <a class="nav__link" th:with="rootpath=(${content.rootpath != null} ? ${content.rootpath} : '')"
+       th:href="${rootpath}+'about.html'">About</a>
+    <a class="nav__link" th:with="rootpath=(${content.rootpath != null} ? ${content.rootpath} : '')"
+       th:href="${rootpath}+'tools.html'">Tools</a>
+    <a class="nav__link" th:with="rootpath=(${content.rootpath != null} ? ${content.rootpath} : '')"
+       th:href="${rootpath}+'archive.html'">Archive</a>
+    <a class="nav__link" th:with="rootpath=(${content.rootpath != null} ? ${content.rootpath} : '')"
+       th:href="${rootpath}+${config.feed_file}">Feed</a>
+  </nav>
+</header>
+</body>
 </html>
