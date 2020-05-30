@@ -10,7 +10,7 @@ jbake {
 
 gitPublish {
     repoUri = 'git@github.com:seakayone/blog.git'
-    branch = 'gh-pages'
+    branch = 'master'
     contents {
         from(file('build/jbake')) {
             into '.'
