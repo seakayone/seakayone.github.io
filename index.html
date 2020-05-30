@@ -1,198 +1,104 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Kleinb Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description"
+        content="Informal blog about software crafting and engineering. Not concluding list of topics: Software Quality, Testing, Backend Development, Tooling and Tipps."/>
+  <meta name="author" content="Christian Kleinbölting"/>
+  <meta name="keywords" content="Software, Clean Code, Software Testing, Java, Scala, Python"/>
+  <meta name="generator" content="JBake"/>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-      <meta charset="utf-8"/>
-      <title>Systemic Blog</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="description" content="Informal blog about software crafting and engineering. Not concluding list of topics: Software Quality, Testing, Backend Development, Tooling and Tipps."/>
-      <meta name="author" content="Christian Kleinboelting"/>
-      <meta name="keywords" content="Software, Clean Code, Software Testing, Java, Scala, Python"/>
-      <meta name="generator" content="JBake"/>
+  <!-- Le styles -->
+  <link rel="stylesheet"
+        href="css/app.css">
+  <link rel="shortcut icon"
+        href="favicon.ico">
+</head>
+<body onload="prettyPrint()">
 
-      <!-- Le styles -->
-      <link href="css/app.css" rel="stylesheet"/>
-      <link rel="shortcut icon" href="favicon.ico"/>
-      <!-- Begin Cookie Consent -->
-      <script type="text/javascript">
-          window.cookieconsent_options = {"message":"This blog uses cookies to ensure you get the best experience on our website","dismiss":"Got it!","learnMore":"More info","link":null,"theme":"dark-bottom"};
-      </script>
-      <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.10/cookieconsent.min.js"></script>
-      <!-- End Cookie Consent plugin -->
-  </head>
-  <body onload="prettyPrint()">
-    <div class="title-bar">
-      <div class="title-bar-left">
-        <ul class="menu">
-          <li class="menu-text"><span class="has-tip" title="[sɪst'ɛmɪk] pertaining to or affecting a system as a whole" aria-haspopup="true">Systemic</span> Blog</li>
 
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="archive.html">Archive</a></li>
-        </ul>
-      </div>
-      <div class="title-bar-right hide-for-small-only">
-        <ul class="menu">
-          <li><a href="feed.xml">feed.xml</a></li>
-        </ul>
-      </div>
-    </div>
 
-    <div class="callout large primary" data-interchange="[img/proxima/small.jpg, small], [img/proxima/medium.jpg, medium], [img/proxima/large.jpg, large]">
-      <div class="row column text-center">
-        <h1 style="color:white">Blog</h1>
-      </div>
-    </div>
+<header>
+  <nav class="nav">
+    <a class="nav__link" href="/index.html">Blog</a>
+    <a class="nav__link" href="/about.html">About</a>
+    <a class="nav__link" href="/tools.html">Tools</a>
+    <a class="nav__link" href="/archive.html">Archive</a>
+    <a class="nav__link" href="/feed.xml">Feed</a>
+  </nav>
+</header>
 
-    <div class="row" id="content">
-      <div class="medium-8 medium-offset-2 columns end">
-        <div class="blog-post">
-          <a href='blog/2018/junit5-extension-for-akka.html'><h3>A JUnit 5 Extension for testing Akka and Akka Streams</h3></a>
-          <p>01 June 2018</p>
-          <p><div class="paragraph"> 
- <p>For an existing project we are using <a href="https://akka.io/">Akka</a> with <a href="https://junit.org/junit5/">JUnit 5</a>.</p> 
-</div> 
-<div class="paragraph"> 
- <p>Akka is an amazing toolkit which has an implementation of the actor model (<a href="https://doc.akka.io/docs/akka/current/guide/actors-motivation.html">akka-actors</a>) as well as the reactive streams (<a href="https://doc.akka.io/docs/akka/current/typed/stream.html#streams">akka-streams</a>) and already comes with a handy test kit as well. However for using the test kit you will still need to setup Akka components like <code>ActorSystem</code> or <code>ActorMaterializer</code> yourself. In order to make this a bit more convenient using JUnit I decided to create a small extension takes care of the lifecycle of those two components during test.</p> 
-</div> 
-<div class="paragraph"> 
- <p><a href="https://junit.org/junit5/docs/current/user-guide/#extensions">JUnit 5 extensions</a> allow you to setup your testing harness. It provides certain hooks which are called <a href="https://junit.org/junit5/docs/current/user-guide/#extensions-lifecycle-callbacks">before, during and after the tests</a>, your extension can use a context object in which it <a href="https://junit.org/junit5/docs/current/user-guide/#extensions-keeping-state">can store its state</a>. An extension can <a href="https://junit.org/junit5/docs/current/user-guide/#extensions-parameter-resolution">resolve test method parameters</a> effectively injecting the components it is managing into each test method.</p> 
-</div> 
-<div class="paragraph"> 
- <p>The little <a href="https://github.com/seakayone/akka-junit"><code>AkkaJunitExtension</code></a> I have created can easily be used. The following test is a short demonstration of that:</p> 
-</div> 
-<div class="listingblock"> 
- <div class="content"> 
-  <pre class="prettyprint highlight"><code class="language-java" data-lang="java">@ExtendWith(AkkaJunitExtension.class)
-@AkkaJunitExtensionConfig(name = "test")
-class SomeAkkaJunit5Test {
 
-    @Test
-    void system_is_present(ActorSystem system){
-        assertThat(system).isNotNull();
-    }
+<main>
+    
+    <article class="blog-post blog-post__teaser">
+        <h1 class="blog-post__title">Do not write your .gitignore if you are lazy</h1>
 
-    @Test
-    void system_has_name(ActorSystem system){
-        assertThat(system.name()).isEqualTo("test");
-    }
+        <p class="blog-post__date">30 May 2019</p>
 
-    @Test
-    void actormaterializer_is_present(ActorMaterializer mat) {
-        assertThat(mat).isNotNull();
-    }
-}</code></pre> 
- </div> 
-</div></p>
-        </div>
-        <div class="blog-post">
-          <a href='blog/2018/null-handling-with-javas-optional.html'><h3>Java: Null Handling with Optional</h3></a>
-          <p>24 May 2018</p>
-          <p><div class="paragraph"> 
- <p>Java has made <a href="https://www.infoq.com/presentations/Null-References-The-Billion-Dollar-Mistake-Tony-Hoare">the billion dollar mistake</a>. Its creators decided it is a good idea to implement the <code>null</code> reference. This reference leads developers having to deal a lot with unexpected behaviours and the ubiquitious <code>NullPointerException</code>. The problem with <code>null</code> is that it does not provide convenient ways to deal with its presence other than checking for its existence. This way it is subverting any type system, making the code hard to read and debug and possibly leads to bad design.</p> 
-</div> 
-<div class="paragraph"> 
- <p>Have you ever seen code with lots of nested if statements and cringed?</p> 
-</div> 
-<div class="listingblock"> 
- <div class="content"> 
-  <pre class="prettyprint highlight"><code class="language-java" data-lang="java">Foo foo = someMethodWhichReturnsFooOrNull();
-if (foo != null) {
-  Bar bar = foo.getBar(); // foo.getBar() returns Bar or null
-  if (bar != null) {
-    bar.doBaz();
-  }
-}</code></pre> 
- </div> 
-</div> 
-<div class="paragraph"> 
- <p>Using Java 8’s <code>Optional&lt;T&gt;</code> type and method references we could simplify the above code to look like this:</p> 
-</div> 
-<div class="listingblock"> 
- <div class="content"> 
-  <pre class="prettyprint highlight"><code class="language-java" data-lang="java">someMethodWhichReturnsOptionalFoo()
-  .flatMap(Foo::getBarOptional())
-  .ifPresent(Bar::doBaz);</code></pre> 
- </div> 
-</div> 
-<div class="paragraph"> 
- <p>IMHO this would make the code not only shorter but also easier to read. The <code>Optional</code> seems to sooth our pain. Essentially <code>Optional</code> models the behaviour that a value can be present or absent and this way provides certain operations which will be executed if and only if the value is present seemingly making the dreaded <code>NullPointerException</code> vanish.</p> 
-</div> 
-<div class="paragraph"> 
- <p>All good, right? This should allow us to write better code in terms of readability and null safeness. Not entirely: Unfortunately Java still allows to return null for any method. This means that even methods with a return value of <code>Optional</code> can actually return <code>null</code>. In the example above for example if the <code>getBarOptional</code> method returns <code>null</code> we would get a <code>NullPointerException</code> from the <code>flatMap</code> as this (<a href="https://developer.atlassian.com/blog/2015/08/optional-broken/">admittedly awkwardly</a>) requires the return value to be not <code>null</code>.</p> 
-</div> 
-<div class="paragraph"> 
- <p>So we are back at square one leaving developers behind with only self-discipline and code. With <code>Optional</code> the code will at least be more readable though.</p> 
-</div> 
-<div class="paragraph"> 
- <p>In a later article I will present a way how to statically analyse our code and ensuring that <code>null</code> is never returned accidentally. I will also show how to use annotations to make it clearer for a developer that one has to deal with <code>null</code>, making writing Java more like the Kotlin way of handling <code>null</code> in that preventing the use of <code>null</code> will become the default way of writing code.</p> 
-</div></p>
-        </div>
-        <div class="blog-post">
-          <a href='blog/2018/recursively-remove-lines-in-iles.html'><h3>Recursively Remove Lines in Files</h3></a>
-          <p>20 May 2018</p>
-          <p><div class="paragraph"> 
- <p>Sometimes you would like to delete all lines containing a certain <code>KEYWORD</code> word for all files contained in a folder all of it child folders.</p> 
-</div> 
-<div class="paragraph"> 
- <p>When using macOs you can simply do the following:</p> 
-</div> 
-<div class="literalblock"> 
- <div class="content"> 
-  <pre>find . -type f -iname "*.properties" -print0|xargs -0 sed -i '' /KEYWORD/d</pre> 
- </div> 
-</div> 
-<div class="paragraph"> 
- <p>The parameter <code>-iname "*.properties</code> will only take files with the ending <code>properties</code> into account.</p> 
-</div> 
-<div class="paragraph"> 
- <p>Have a look on the <a href="https://superuser.com/questions/445514/finding-and-deleting-lines-from-all-files-recursively">related topic on Stackoverflow</a> where you can find alternatives for <code>zsh</code> and GNU sed.</p> 
-</div></p>
-        </div>
-        <div class="blog-post">
-          <a href='blog/2016/euro-sci-py-2016.html'><h3>EuroSciPy Conference 2016</h3></a>
-          <p>27 August 2016</p>
-          <p><div class="paragraph"> 
- <p>Being a Java and (sometimes) Scala developer on a daily basis I have thought to give it a try and take a look beyond my own nose. Thus I have been attended the <a href="https://www.euroscipy.org/2016/program/">EuroSciPy Conference 2016</a>.</p> 
-</div> 
-<div class="paragraph"> 
- <p>These are some talks I really enjoyed and seem worthy of mention:</p> 
-</div> 
-<div class="ulist"> 
- <ul> 
-  <li> <p><a href="http://gael-varoquaux.info/">Gael Varoquaux</a>: Writing Code for Science</p> </li> 
-  <li> <p><a href="http://www2.mpia-hd.mpg.de/~robitaille/">Thomas Robitaille</a>: <a href="https://www.euroscipy.org/2016/schedule/sessions/25/">Interactive multi-dimensional data exploration and linking with Glue</a></p> </li> 
-  <li> <p><a href="http://ogrisel.com/">Olivier Grisel</a>: <a href="https://www.euroscipy.org/2016/schedule/sessions/21/">Cluster Computing with Docker</a></p> </li> 
-  <li> <p>Holger Peters: <a href="https://www.euroscipy.org/2016/schedule/sessions/30/">Data Science, Python and the Functional Programming Revolution</a></p> </li> 
- </ul> 
-</div></p>
-        </div>
+        <p class="blog-post__content">Get your `.gitignore` as a service.</p>
 
-        <hr />
+        <p>
+            <a class="readMore" href="blog/2019/dont-write-gitignore-if-you-are-lazy.html">read more &hellip;</a>
+        </p>
+    </article>
+    
+    <article class="blog-post blog-post__teaser">
+        <h1 class="blog-post__title">A JUnit 5 Extension for testing Akka and Akka Streams</h1>
 
-        <p>Older posts are available in the <a href='archive.html'>archive</a>.</p>
-      </div>
-    </div>
+        <p class="blog-post__date">1 June 2018</p>
+
+        <p class="blog-post__content">A JUnit 5 extension for testing with Akka and Akka Streams.</p>
+
+        <p>
+            <a class="readMore" href="blog/2018/junit5-extension-for-akka.html">read more &hellip;</a>
+        </p>
+    </article>
+    
+    <article class="blog-post blog-post__teaser">
+        <h1 class="blog-post__title">Java: Null Handling with Optional</h1>
+
+        <p class="blog-post__date">24 May 2018</p>
+
+        <p class="blog-post__content">Handling Java's `null` with Java 8 `Optional`</p>
+
+        <p>
+            <a class="readMore" href="blog/2018/null-handling-with-javas-optional.html">read more &hellip;</a>
+        </p>
+    </article>
+    
+    <article class="blog-post blog-post__teaser">
+        <h1 class="blog-post__title">Recursively Remove Lines in Files</h1>
+
+        <p class="blog-post__date">20 May 2018</p>
+
+        <p class="blog-post__content">How to delete all lines containing a certain keyword in a directory and its children.</p>
+
+        <p>
+            <a class="readMore" href="blog/2018/recursively-remove-lines-in-iles.html">read more &hellip;</a>
+        </p>
+    </article>
+    
+</main>
+
+<aside>
+    <p>More articles can be found in the <a href="/archive.html">archive</a>.</p>
+</aside>
+<footer>
     <div>
-      <div class="row column">
-        <ul class="menu">
-          <li><a href="#">Top</a></li>
-        </ul>
-      </div>
-      <script src="js/jquery.js"></script>
-      <script src="js/foundation.min.js"></script>
-      <script src="js/prettify.js"></script>
-      <script src="js/app.js"></script>
-      <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-        ga('create', 'UA-83282715-1', 'auto');
-        ga('send', 'pageview');
-
-      </script>
+        <a href="#">^ Go to top ^</a> | &copy; Christian Kleinb&ouml;lting, <a
+            href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed">CC BY-NC-SA 4.0</a>
     </div>
-  </body>
+</footer>
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script
+    src="js/prettify.js"></script>
+
+</body>
 </html>
+

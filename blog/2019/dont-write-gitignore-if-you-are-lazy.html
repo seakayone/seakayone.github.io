@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"/>
-  <title>Recursively Remove Lines in Files</title>
+  <title>Do not write your .gitignore if you are lazy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description"
@@ -34,25 +34,52 @@
 
 <main>
   <article class="blog-post">
-    <h1 class="blog-post__title">Recursively Remove Lines in Files</h1>
-    <p class="blog-post__date">20 May 2018</p>
+    <h1 class="blog-post__title">Do not write your .gitignore if you are lazy</h1>
+    <p class="blog-post__date">30 May 2019</p>
     <p class="blog-post__content"><div class="paragraph">
-<p>Sometimes you would like to delete all lines containing a certain <code>KEYWORD</code> word for all files contained in a folder all of it child folders.</p>
+<p>For some people it is well and good to have a nicely handcrafted <code>.gitignore</code> in their project.
+However, I myself am super lazy.</p>
 </div>
 <div class="paragraph">
-<p>When using macOs you can simply do the following:</p>
+<p>I do not want to have to answers like:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Which new files does my IDE generate in its newest release?</p>
+</li>
+<li>
+<p>Is there something different with the latest other tool (<code>gradle</code>, <code>ng</code>, you name it)?</p>
+</li>
+<li>
+<p>and more&#8230;&#8203;.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Save yourself some time and use <a href="https://www.gitignore.io/">gitignore.io</a>.</p>
+</div>
+<div class="paragraph">
+<p>I use a small shell function which allows me to live in the shell and create the file on the fly:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="prettyprint highlight"><code data-lang="shell">  find . -type f -iname "*.properties" -print0| \
-  xargs -0 sed -i '' /KEYWORD/d</code></pre>
+<pre class="prettyprint highlight"><code data-lang="shell">gi () {
+  curl -sLw "\n" https://www.gitignore.io/api/$@
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>The parameter <code>-iname "*.properties</code> will only take files with the ending <code>properties</code> into account.</p>
+<p>This way with a simple one liner <code>gi gradle,java,intellij &gt; .gitignore</code> my newest project is safely git ignored.</p>
 </div>
 <div class="paragraph">
-<p>Have a look on the <a href="https://superuser.com/questions/445514/finding-and-deleting-lines-from-all-files-recursively">related topic on Stackoverflow</a> where you can find alternatives for <code>zsh</code> and GNU sed.</p>
+<p>Templates are plenty and updated regularly: <a href="https://github.com/toptal/gitignore" class="bare">https://github.com/toptal/gitignore</a></p>
+</div>
+<div class="paragraph">
+<p>For oh-my-zsh users there is even a handy <a href="https://docs.gitignore.io/use/advanced-command-line#oh-my-zsh">plugin with autocompletion</a>.</p>
+</div>
+<div class="paragraph">
+<p>Go get it.</p>
 </div></p>
   </article>
 </main>

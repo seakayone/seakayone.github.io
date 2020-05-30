@@ -1,35 +1,96 @@
 <?xml version="1.0"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Systemic Blog</title>
-    <link >http://seakayone.github.io</link>
-    <atom:link href="http://seakayone.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <description>Blog about software handicraft and engineering</description>
-    <language>en-gb</language>
-    <pubDate>Fri, 1 Jun 2018 18:51:15 +0200</pubDate>
-    <lastBuildDate>Fri, 1 Jun 2018 18:51:15 +0200</lastBuildDate>
-
-    <item>
-      <title>A JUnit 5 Extension for testing Akka and Akka Streams</title>
-      <link >http://seakayone.github.io/blog/2018/junit5-extension-for-akka.html</link>
-      <pubDate>Fri, 1 Jun 2018 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">blog/2018/junit5-extension-for-akka.html</guid>
-      <description>&amp;lt;div class=&amp;quot;paragraph&amp;quot;&amp;gt; 
- &amp;lt;p&amp;gt;For an existing project we are using &amp;lt;a href=&amp;quot;https://akka.io/&amp;quot;&amp;gt;Akka&amp;lt;/a&amp;gt; with &amp;lt;a href=&amp;quot;https://junit.org/junit5/&amp;quot;&amp;gt;JUnit 5&amp;lt;/a&amp;gt;.&amp;lt;/p&amp;gt; 
-&amp;lt;/div&amp;gt; 
-&amp;lt;div class=&amp;quot;paragraph&amp;quot;&amp;gt; 
- &amp;lt;p&amp;gt;Akka is an amazing toolkit which has an implementation of the actor model (&amp;lt;a href=&amp;quot;https://doc.akka.io/docs/akka/current/guide/actors-motivation.html&amp;quot;&amp;gt;akka-actors&amp;lt;/a&amp;gt;) as well as the reactive streams (&amp;lt;a href=&amp;quot;https://doc.akka.io/docs/akka/current/typed/stream.html#streams&amp;quot;&amp;gt;akka-streams&amp;lt;/a&amp;gt;) and already comes with a handy test kit as well. However for using the test kit you will still need to setup Akka components like &amp;lt;code&amp;gt;ActorSystem&amp;lt;/code&amp;gt; or &amp;lt;code&amp;gt;ActorMaterializer&amp;lt;/code&amp;gt; yourself. In order to make this a bit more convenient using JUnit I decided to create a small extension takes care of the lifecycle of those two components during test.&amp;lt;/p&amp;gt; 
-&amp;lt;/div&amp;gt; 
-&amp;lt;div class=&amp;quot;paragraph&amp;quot;&amp;gt; 
- &amp;lt;p&amp;gt;&amp;lt;a href=&amp;quot;https://junit.org/junit5/docs/current/user-guide/#extensions&amp;quot;&amp;gt;JUnit 5 extensions&amp;lt;/a&amp;gt; allow you to setup your testing harness. It provides certain hooks which are called &amp;lt;a href=&amp;quot;https://junit.org/junit5/docs/current/user-guide/#extensions-lifecycle-callbacks&amp;quot;&amp;gt;before, during and after the tests&amp;lt;/a&amp;gt;, your extension can use a context object in which it &amp;lt;a href=&amp;quot;https://junit.org/junit5/docs/current/user-guide/#extensions-keeping-state&amp;quot;&amp;gt;can store its state&amp;lt;/a&amp;gt;. An extension can &amp;lt;a href=&amp;quot;https://junit.org/junit5/docs/current/user-guide/#extensions-parameter-resolution&amp;quot;&amp;gt;resolve test method parameters&amp;lt;/a&amp;gt; effectively injecting the components it is managing into each test method.&amp;lt;/p&amp;gt; 
-&amp;lt;/div&amp;gt; 
-&amp;lt;div class=&amp;quot;paragraph&amp;quot;&amp;gt; 
- &amp;lt;p&amp;gt;The little &amp;lt;a href=&amp;quot;https://github.com/seakayone/akka-junit&amp;quot;&amp;gt;&amp;lt;code&amp;gt;AkkaJunitExtension&amp;lt;/code&amp;gt;&amp;lt;/a&amp;gt; I have created can easily be used. The following test is a short demonstration of that:&amp;lt;/p&amp;gt; 
-&amp;lt;/div&amp;gt; 
-&amp;lt;div class=&amp;quot;listingblock&amp;quot;&amp;gt; 
- &amp;lt;div class=&amp;quot;content&amp;quot;&amp;gt; 
-  &amp;lt;pre class=&amp;quot;prettyprint highlight&amp;quot;&amp;gt;&amp;lt;code class=&amp;quot;language-java&amp;quot; data-lang=&amp;quot;java&amp;quot;&amp;gt;@ExtendWith(AkkaJunitExtension.class)
-@AkkaJunitExtensionConfig(name = &amp;quot;test&amp;quot;)
+    <channel>
+        <title>JBake</title>
+        <link>http://seakayone.github.io/</link>
+        <atom:link href="http://seakayone.github.io//feed.xml" rel="self"
+                   type="application/rss+xml"/>
+        <description>JBake Bootstrap Template</description>
+        <language>en-gb</language>
+        <pubDate>Sat, 30 May 2020 23:04:44 +0200</pubDate>
+        <lastBuildDate>Sat, 30 May 2020 23:04:44 +0200</lastBuildDate>
+        
+        <item>
+            <title>Do not write your .gitignore if you are lazy</title>
+            <link>http://seakayone.github.io//blog/2019/dont-write-gitignore-if-you-are-lazy.html</link>
+            <pubDate>Thu, 30 May 2019 00:00:00 +0200</pubDate>
+            <guid isPermaLink="false">blog/2019/dont-write-gitignore-if-you-are-lazy.html</guid>
+            <description>
+                &lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;For some people it is well and good to have a nicely handcrafted &lt;code&gt;.gitignore&lt;/code&gt; in their project.
+However, I myself am super lazy.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;I do not want to have to answers like:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Which new files does my IDE generate in its newest release?&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Is there something different with the latest other tool (&lt;code&gt;gradle&lt;/code&gt;, &lt;code&gt;ng&lt;/code&gt;, you name it)?&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;and more&amp;#8230;&amp;#8203;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Save yourself some time and use &lt;a href=&quot;https://www.gitignore.io/&quot;&gt;gitignore.io&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;I use a small shell function which allows me to live in the shell and create the file on the fly:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight&quot;&gt;&lt;code data-lang=&quot;shell&quot;&gt;gi () {
+  curl -sLw &quot;\n&quot; https://www.gitignore.io/api/$@
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;This way with a simple one liner &lt;code&gt;gi gradle,java,intellij &amp;gt; .gitignore&lt;/code&gt; my newest project is safely git ignored.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Templates are plenty and updated regularly: &lt;a href=&quot;https://github.com/toptal/gitignore&quot; class=&quot;bare&quot;&gt;https://github.com/toptal/gitignore&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;For oh-my-zsh users there is even a handy &lt;a href=&quot;https://docs.gitignore.io/use/advanced-command-line#oh-my-zsh&quot;&gt;plugin with autocompletion&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Go get it.&lt;/p&gt;
+&lt;/div&gt;
+            </description>
+        </item>
+        
+        <item>
+            <title>A JUnit 5 Extension for testing Akka and Akka Streams</title>
+            <link>http://seakayone.github.io//blog/2018/junit5-extension-for-akka.html</link>
+            <pubDate>Fri, 1 Jun 2018 00:00:00 +0200</pubDate>
+            <guid isPermaLink="false">blog/2018/junit5-extension-for-akka.html</guid>
+            <description>
+                &lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;For an existing project we are using &lt;a href=&quot;https://akka.io/&quot;&gt;Akka&lt;/a&gt; with &lt;a href=&quot;https://junit.org/junit5/&quot;&gt;JUnit 5&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Akka is an amazing toolkit which has an implementation of the actor model (&lt;a href=&quot;https://doc.akka.io/docs/akka/current/guide/actors-motivation.html&quot;&gt;akka-actors&lt;/a&gt;) as well as the reactive streams (&lt;a href=&quot;https://doc.akka.io/docs/akka/current/typed/stream.html#streams&quot;&gt;akka-streams&lt;/a&gt;) and already comes with a handy test kit as well.
+However for using the test kit you will still need to setup Akka components like &lt;code&gt;ActorSystem&lt;/code&gt; or &lt;code&gt;ActorMaterializer&lt;/code&gt; yourself.
+In order to make this a bit more convenient using JUnit I decided to create a small extension takes care of the lifecycle of those two components during test.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;a href=&quot;https://junit.org/junit5/docs/current/user-guide/#extensions&quot;&gt;JUnit 5 extensions&lt;/a&gt; allow you to setup your testing harness.
+It provides certain hooks which are called &lt;a href=&quot;https://junit.org/junit5/docs/current/user-guide/#extensions-lifecycle-callbacks&quot;&gt;before, during and after the tests&lt;/a&gt;, your extension can use a context object in which it &lt;a href=&quot;https://junit.org/junit5/docs/current/user-guide/#extensions-keeping-state&quot;&gt;can store its state&lt;/a&gt;.
+An extension can &lt;a href=&quot;https://junit.org/junit5/docs/current/user-guide/#extensions-parameter-resolution&quot;&gt;resolve test method parameters&lt;/a&gt; effectively injecting the components it is managing into each test method.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;The little &lt;a href=&quot;https://github.com/seakayone/akka-junit&quot;&gt;&lt;code&gt;AkkaJunitExtension&lt;/code&gt;&lt;/a&gt; I have created can easily be used.
+The following test is a short demonstration of that:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight&quot;&gt;&lt;code data-lang=&quot;java&quot;&gt;@ExtendWith(AkkaJunitExtension.class)
+@AkkaJunitExtensionConfig(name = &quot;test&quot;)
 class SomeAkkaJunit5Test {
 
     @Test
@@ -39,102 +100,129 @@ class SomeAkkaJunit5Test {
 
     @Test
     void system_has_name(ActorSystem system){
-        assertThat(system.name()).isEqualTo(&amp;quot;test&amp;quot;);
+        assertThat(system.name()).isEqualTo(&quot;test&quot;);
     }
 
     @Test
     void actormaterializer_is_present(ActorMaterializer mat) {
         assertThat(mat).isNotNull();
     }
-}&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt; 
- &amp;lt;/div&amp;gt; 
-&amp;lt;/div&amp;gt;</description>
-    </item><item>
-      <title>Java: Null Handling with Optional</title>
-      <link >http://seakayone.github.io/blog/2018/null-handling-with-javas-optional.html</link>
-      <pubDate>Thu, 24 May 2018 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">blog/2018/null-handling-with-javas-optional.html</guid>
-      <description>&amp;lt;div class=&amp;quot;paragraph&amp;quot;&amp;gt; 
- &amp;lt;p&amp;gt;Java has made &amp;lt;a href=&amp;quot;https://www.infoq.com/presentations/Null-References-The-Billion-Dollar-Mistake-Tony-Hoare&amp;quot;&amp;gt;the billion dollar mistake&amp;lt;/a&amp;gt;. Its creators decided it is a good idea to implement the &amp;lt;code&amp;gt;null&amp;lt;/code&amp;gt; reference. This reference leads developers having to deal a lot with unexpected behaviours and the ubiquitious &amp;lt;code&amp;gt;NullPointerException&amp;lt;/code&amp;gt;. The problem with &amp;lt;code&amp;gt;null&amp;lt;/code&amp;gt; is that it does not provide convenient ways to deal with its presence other than checking for its existence. This way it is subverting any type system, making the code hard to read and debug and possibly leads to bad design.&amp;lt;/p&amp;gt; 
-&amp;lt;/div&amp;gt; 
-&amp;lt;div class=&amp;quot;paragraph&amp;quot;&amp;gt; 
- &amp;lt;p&amp;gt;Have you ever seen code with lots of nested if statements and cringed?&amp;lt;/p&amp;gt; 
-&amp;lt;/div&amp;gt; 
-&amp;lt;div class=&amp;quot;listingblock&amp;quot;&amp;gt; 
- &amp;lt;div class=&amp;quot;content&amp;quot;&amp;gt; 
-  &amp;lt;pre class=&amp;quot;prettyprint highlight&amp;quot;&amp;gt;&amp;lt;code class=&amp;quot;language-java&amp;quot; data-lang=&amp;quot;java&amp;quot;&amp;gt;Foo foo = someMethodWhichReturnsFooOrNull();
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+            </description>
+        </item>
+        
+        <item>
+            <title>Java: Null Handling with Optional</title>
+            <link>http://seakayone.github.io//blog/2018/null-handling-with-javas-optional.html</link>
+            <pubDate>Thu, 24 May 2018 00:00:00 +0200</pubDate>
+            <guid isPermaLink="false">blog/2018/null-handling-with-javas-optional.html</guid>
+            <description>
+                &lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Java has made &lt;a href=&quot;https://www.infoq.com/presentations/Null-References-The-Billion-Dollar-Mistake-Tony-Hoare&quot;&gt;the billion dollar mistake&lt;/a&gt;. Its creators decided it is a good idea to implement the &lt;code&gt;null&lt;/code&gt; reference. This reference leads developers having to deal a lot with unexpected behaviours and the ubiquitious &lt;code&gt;NullPointerException&lt;/code&gt;. The problem with &lt;code&gt;null&lt;/code&gt; is that it does not provide convenient ways to deal with its presence other than checking for its existence. This way it is subverting any type system, making the code hard to read and debug and possibly leads to bad design.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Have you ever seen code with lots of nested if statements and cringed?&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight&quot;&gt;&lt;code data-lang=&quot;java&quot;&gt;Foo foo = someMethodWhichReturnsFooOrNull();
 if (foo != null) {
   Bar bar = foo.getBar(); // foo.getBar() returns Bar or null
   if (bar != null) {
     bar.doBaz();
   }
-}&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt; 
- &amp;lt;/div&amp;gt; 
-&amp;lt;/div&amp;gt; 
-&amp;lt;div class=&amp;quot;paragraph&amp;quot;&amp;gt; 
- &amp;lt;p&amp;gt;Using Java 8’s &amp;lt;code&amp;gt;Optional&amp;amp;lt;T&amp;amp;gt;&amp;lt;/code&amp;gt; type and method references we could simplify the above code to look like this:&amp;lt;/p&amp;gt; 
-&amp;lt;/div&amp;gt; 
-&amp;lt;div class=&amp;quot;listingblock&amp;quot;&amp;gt; 
- &amp;lt;div class=&amp;quot;content&amp;quot;&amp;gt; 
-  &amp;lt;pre class=&amp;quot;prettyprint highlight&amp;quot;&amp;gt;&amp;lt;code class=&amp;quot;language-java&amp;quot; data-lang=&amp;quot;java&amp;quot;&amp;gt;someMethodWhichReturnsOptionalFoo()
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Using Java 8&amp;#8217;s &lt;code&gt;Optional&amp;lt;T&amp;gt;&lt;/code&gt; type and method references we could simplify the above code to look like this:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight&quot;&gt;&lt;code data-lang=&quot;java&quot;&gt;someMethodWhichReturnsOptionalFoo()
   .flatMap(Foo::getBarOptional())
-  .ifPresent(Bar::doBaz);&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt; 
- &amp;lt;/div&amp;gt; 
-&amp;lt;/div&amp;gt; 
-&amp;lt;div class=&amp;quot;paragraph&amp;quot;&amp;gt; 
- &amp;lt;p&amp;gt;IMHO this would make the code not only shorter but also easier to read. The &amp;lt;code&amp;gt;Optional&amp;lt;/code&amp;gt; seems to sooth our pain. Essentially &amp;lt;code&amp;gt;Optional&amp;lt;/code&amp;gt; models the behaviour that a value can be present or absent and this way provides certain operations which will be executed if and only if the value is present seemingly making the dreaded &amp;lt;code&amp;gt;NullPointerException&amp;lt;/code&amp;gt; vanish.&amp;lt;/p&amp;gt; 
-&amp;lt;/div&amp;gt; 
-&amp;lt;div class=&amp;quot;paragraph&amp;quot;&amp;gt; 
- &amp;lt;p&amp;gt;All good, right? This should allow us to write better code in terms of readability and null safeness. Not entirely: Unfortunately Java still allows to return null for any method. This means that even methods with a return value of &amp;lt;code&amp;gt;Optional&amp;lt;/code&amp;gt; can actually return &amp;lt;code&amp;gt;null&amp;lt;/code&amp;gt;. In the example above for example if the &amp;lt;code&amp;gt;getBarOptional&amp;lt;/code&amp;gt; method returns &amp;lt;code&amp;gt;null&amp;lt;/code&amp;gt; we would get a &amp;lt;code&amp;gt;NullPointerException&amp;lt;/code&amp;gt; from the &amp;lt;code&amp;gt;flatMap&amp;lt;/code&amp;gt; as this (&amp;lt;a href=&amp;quot;https://developer.atlassian.com/blog/2015/08/optional-broken/&amp;quot;&amp;gt;admittedly awkwardly&amp;lt;/a&amp;gt;) requires the return value to be not &amp;lt;code&amp;gt;null&amp;lt;/code&amp;gt;.&amp;lt;/p&amp;gt; 
-&amp;lt;/div&amp;gt; 
-&amp;lt;div class=&amp;quot;paragraph&amp;quot;&amp;gt; 
- &amp;lt;p&amp;gt;So we are back at square one leaving developers behind with only self-discipline and code. With &amp;lt;code&amp;gt;Optional&amp;lt;/code&amp;gt; the code will at least be more readable though.&amp;lt;/p&amp;gt; 
-&amp;lt;/div&amp;gt; 
-&amp;lt;div class=&amp;quot;paragraph&amp;quot;&amp;gt; 
- &amp;lt;p&amp;gt;In a later article I will present a way how to statically analyse our code and ensuring that &amp;lt;code&amp;gt;null&amp;lt;/code&amp;gt; is never returned accidentally. I will also show how to use annotations to make it clearer for a developer that one has to deal with &amp;lt;code&amp;gt;null&amp;lt;/code&amp;gt;, making writing Java more like the Kotlin way of handling &amp;lt;code&amp;gt;null&amp;lt;/code&amp;gt; in that preventing the use of &amp;lt;code&amp;gt;null&amp;lt;/code&amp;gt; will become the default way of writing code.&amp;lt;/p&amp;gt; 
-&amp;lt;/div&amp;gt;</description>
-    </item><item>
-      <title>Recursively Remove Lines in Files</title>
-      <link >http://seakayone.github.io/blog/2018/recursively-remove-lines-in-iles.html</link>
-      <pubDate>Sun, 20 May 2018 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">blog/2018/recursively-remove-lines-in-iles.html</guid>
-      <description>&amp;lt;div class=&amp;quot;paragraph&amp;quot;&amp;gt; 
- &amp;lt;p&amp;gt;Sometimes you would like to delete all lines containing a certain &amp;lt;code&amp;gt;KEYWORD&amp;lt;/code&amp;gt; word for all files contained in a folder all of it child folders.&amp;lt;/p&amp;gt; 
-&amp;lt;/div&amp;gt; 
-&amp;lt;div class=&amp;quot;paragraph&amp;quot;&amp;gt; 
- &amp;lt;p&amp;gt;When using macOs you can simply do the following:&amp;lt;/p&amp;gt; 
-&amp;lt;/div&amp;gt; 
-&amp;lt;div class=&amp;quot;literalblock&amp;quot;&amp;gt; 
- &amp;lt;div class=&amp;quot;content&amp;quot;&amp;gt; 
-  &amp;lt;pre&amp;gt;find . -type f -iname &amp;quot;*.properties&amp;quot; -print0|xargs -0 sed -i &amp;#39;&amp;#39; /KEYWORD/d&amp;lt;/pre&amp;gt; 
- &amp;lt;/div&amp;gt; 
-&amp;lt;/div&amp;gt; 
-&amp;lt;div class=&amp;quot;paragraph&amp;quot;&amp;gt; 
- &amp;lt;p&amp;gt;The parameter &amp;lt;code&amp;gt;-iname &amp;quot;*.properties&amp;lt;/code&amp;gt; will only take files with the ending &amp;lt;code&amp;gt;properties&amp;lt;/code&amp;gt; into account.&amp;lt;/p&amp;gt; 
-&amp;lt;/div&amp;gt; 
-&amp;lt;div class=&amp;quot;paragraph&amp;quot;&amp;gt; 
- &amp;lt;p&amp;gt;Have a look on the &amp;lt;a href=&amp;quot;https://superuser.com/questions/445514/finding-and-deleting-lines-from-all-files-recursively&amp;quot;&amp;gt;related topic on Stackoverflow&amp;lt;/a&amp;gt; where you can find alternatives for &amp;lt;code&amp;gt;zsh&amp;lt;/code&amp;gt; and GNU sed.&amp;lt;/p&amp;gt; 
-&amp;lt;/div&amp;gt;</description>
-    </item><item>
-      <title>EuroSciPy Conference 2016</title>
-      <link >http://seakayone.github.io/blog/2016/euro-sci-py-2016.html</link>
-      <pubDate>Sat, 27 Aug 2016 00:00:00 +0200</pubDate>
-      <guid isPermaLink="false">blog/2016/euro-sci-py-2016.html</guid>
-      <description>&amp;lt;div class=&amp;quot;paragraph&amp;quot;&amp;gt; 
- &amp;lt;p&amp;gt;Being a Java and (sometimes) Scala developer on a daily basis I have thought to give it a try and take a look beyond my own nose. Thus I have been attended the &amp;lt;a href=&amp;quot;https://www.euroscipy.org/2016/program/&amp;quot;&amp;gt;EuroSciPy Conference 2016&amp;lt;/a&amp;gt;.&amp;lt;/p&amp;gt; 
-&amp;lt;/div&amp;gt; 
-&amp;lt;div class=&amp;quot;paragraph&amp;quot;&amp;gt; 
- &amp;lt;p&amp;gt;These are some talks I really enjoyed and seem worthy of mention:&amp;lt;/p&amp;gt; 
-&amp;lt;/div&amp;gt; 
-&amp;lt;div class=&amp;quot;ulist&amp;quot;&amp;gt; 
- &amp;lt;ul&amp;gt; 
-  &amp;lt;li&amp;gt; &amp;lt;p&amp;gt;&amp;lt;a href=&amp;quot;http://gael-varoquaux.info/&amp;quot;&amp;gt;Gael Varoquaux&amp;lt;/a&amp;gt;: Writing Code for Science&amp;lt;/p&amp;gt; &amp;lt;/li&amp;gt; 
-  &amp;lt;li&amp;gt; &amp;lt;p&amp;gt;&amp;lt;a href=&amp;quot;http://www2.mpia-hd.mpg.de/~robitaille/&amp;quot;&amp;gt;Thomas Robitaille&amp;lt;/a&amp;gt;: &amp;lt;a href=&amp;quot;https://www.euroscipy.org/2016/schedule/sessions/25/&amp;quot;&amp;gt;Interactive multi-dimensional data exploration and linking with Glue&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt; &amp;lt;/li&amp;gt; 
-  &amp;lt;li&amp;gt; &amp;lt;p&amp;gt;&amp;lt;a href=&amp;quot;http://ogrisel.com/&amp;quot;&amp;gt;Olivier Grisel&amp;lt;/a&amp;gt;: &amp;lt;a href=&amp;quot;https://www.euroscipy.org/2016/schedule/sessions/21/&amp;quot;&amp;gt;Cluster Computing with Docker&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt; &amp;lt;/li&amp;gt; 
-  &amp;lt;li&amp;gt; &amp;lt;p&amp;gt;Holger Peters: &amp;lt;a href=&amp;quot;https://www.euroscipy.org/2016/schedule/sessions/30/&amp;quot;&amp;gt;Data Science, Python and the Functional Programming Revolution&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt; &amp;lt;/li&amp;gt; 
- &amp;lt;/ul&amp;gt; 
-&amp;lt;/div&amp;gt;</description>
-    </item>
+  .ifPresent(Bar::doBaz);&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;IMHO this would make the code not only shorter but also easier to read. The &lt;code&gt;Optional&lt;/code&gt; seems to sooth our pain. Essentially &lt;code&gt;Optional&lt;/code&gt; models the behaviour that a value can be present or absent and this way provides certain operations which will be executed if and only if the value is present seemingly making the dreaded &lt;code&gt;NullPointerException&lt;/code&gt; vanish.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;All good, right? This should allow us to write better code in terms of readability and null safeness. Not entirely: Unfortunately Java still allows to return null for any method. This means that even methods with a return value of &lt;code&gt;Optional&lt;/code&gt; can actually return &lt;code&gt;null&lt;/code&gt;. In the example above for example if the &lt;code&gt;getBarOptional&lt;/code&gt; method returns &lt;code&gt;null&lt;/code&gt; we would get a &lt;code&gt;NullPointerException&lt;/code&gt; from the &lt;code&gt;flatMap&lt;/code&gt; as this (&lt;a href=&quot;https://developer.atlassian.com/blog/2015/08/optional-broken/&quot;&gt;admittedly awkwardly&lt;/a&gt;) requires the return value to be not &lt;code&gt;null&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;So we are back at square one leaving developers behind with only self-discipline and code. With &lt;code&gt;Optional&lt;/code&gt; the code will at least be more readable though.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;In a later article I will present a way how to statically analyse our code and ensuring that &lt;code&gt;null&lt;/code&gt; is never returned accidentally. I will also show how to use annotations to make it clearer for a developer that one has to deal with &lt;code&gt;null&lt;/code&gt;, making writing Java more like the Kotlin way of handling &lt;code&gt;null&lt;/code&gt; in that preventing the use of &lt;code&gt;null&lt;/code&gt; will become the default way of writing code.&lt;/p&gt;
+&lt;/div&gt;
+            </description>
+        </item>
+        
+        <item>
+            <title>Recursively Remove Lines in Files</title>
+            <link>http://seakayone.github.io//blog/2018/recursively-remove-lines-in-iles.html</link>
+            <pubDate>Sun, 20 May 2018 00:00:00 +0200</pubDate>
+            <guid isPermaLink="false">blog/2018/recursively-remove-lines-in-iles.html</guid>
+            <description>
+                &lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Sometimes you would like to delete all lines containing a certain &lt;code&gt;KEYWORD&lt;/code&gt; word for all files contained in a folder all of it child folders.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;When using macOs you can simply do the following:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;prettyprint highlight&quot;&gt;&lt;code data-lang=&quot;shell&quot;&gt;  find . -type f -iname &quot;*.properties&quot; -print0| \
+  xargs -0 sed -i &apos;&apos; /KEYWORD/d&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;The parameter &lt;code&gt;-iname &quot;*.properties&lt;/code&gt; will only take files with the ending &lt;code&gt;properties&lt;/code&gt; into account.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Have a look on the &lt;a href=&quot;https://superuser.com/questions/445514/finding-and-deleting-lines-from-all-files-recursively&quot;&gt;related topic on Stackoverflow&lt;/a&gt; where you can find alternatives for &lt;code&gt;zsh&lt;/code&gt; and GNU sed.&lt;/p&gt;
+&lt;/div&gt;
+            </description>
+        </item>
+        
+        <item>
+            <title>EuroSciPy Conference 2016</title>
+            <link>http://seakayone.github.io//blog/2016/euro-sci-py-2016.html</link>
+            <pubDate>Sat, 27 Aug 2016 00:00:00 +0200</pubDate>
+            <guid isPermaLink="false">blog/2016/euro-sci-py-2016.html</guid>
+            <description>
+                &lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;:summary:Very short notes on EuroSciPy 2016.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Being a Java and (sometimes) Scala developer on a daily basis I have thought to give it a try and take a look beyond my own nose.
+Thus, I have been attended the &lt;a href=&quot;https://www.euroscipy.org/2016/program/&quot;&gt;EuroSciPy Conference 2016&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;These are some talks I really enjoyed and seem worthy of mention:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;http://gael-varoquaux.info/&quot;&gt;Gael Varoquaux&lt;/a&gt;: Writing Code for Science&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;http://www2.mpia-hd.mpg.de/~robitaille/&quot;&gt;Thomas Robitaille&lt;/a&gt;: &lt;a href=&quot;https://www.euroscipy.org/2016/schedule/sessions/25/&quot;&gt;Interactive multi-dimensional data exploration and linking with Glue&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;http://ogrisel.com/&quot;&gt;Olivier Grisel&lt;/a&gt;: &lt;a href=&quot;https://www.euroscipy.org/2016/schedule/sessions/21/&quot;&gt;Cluster Computing with Docker&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Holger Peters: &lt;a href=&quot;https://www.euroscipy.org/2016/schedule/sessions/30/&quot;&gt;Data Science, Python and the Functional Programming Revolution&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+            </description>
+        </item>
+        
 
-  </channel>
+    </channel>
 </rss>
