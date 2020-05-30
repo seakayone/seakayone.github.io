@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>JBake</title>
+        <title>Kleinb is blogging</title>
         <link>http://seakayone.github.io/</link>
         <atom:link href="http://seakayone.github.io//feed.xml" rel="self"
                    type="application/rss+xml"/>
-        <description>JBake Bootstrap Template</description>
+        <description>A solution engineer is writing about Java, Spring, Asciidoctor and more developer stuff.</description>
         <language>en-gb</language>
-        <pubDate>Sat, 30 May 2020 23:44:41 +0200</pubDate>
-        <lastBuildDate>Sat, 30 May 2020 23:44:41 +0200</lastBuildDate>
+        <pubDate>Sun, 31 May 2020 00:10:41 +0200</pubDate>
+        <lastBuildDate>Sun, 31 May 2020 00:10:41 +0200</lastBuildDate>
         
         <item>
             <title>Do not write your .gitignore if you are lazy</title>
