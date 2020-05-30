@@ -1,0 +1,37 @@
+= Do not write your .gitignore if you are lazy
+Christian Kleinbölting
+2019-05-30
+:jbake-type: post
+:jbake-status: published
+:jbake-tags: blog, zsh plugin, shell, git, .gitignore
+:idprefix:
+
+For some people it is well and good to have a nicely handcrafted `.gitignore` in their project.
+However, I myself am super lazy.
+
+I do not want to have to answers like:
+
+* Which new files does my IDE generate in its newest release?
+* Is there something different with the latest other tool (`gradle`, `ng`, you name it)?
+* and more....
+
+Save yourself some time and use https://www.gitignore.io/[gitignore.io].
+
+I use a small shell function which allows me to live in the shell and create the file on the fly:
+
+[source,shell]
+--
+gi () {
+  curl -sLw "\n" https://www.gitignore.io/api/$@
+}
+--
+
+This way with a simple one liner `gi gradle,java,intellij > .gitignore` my newest project is safely git ignored.
+
+Templates are plenty and updated regularly: https://github.com/toptal/gitignore
+
+For oh-my-zsh users there is even a handy https://docs.gitignore.io/use/advanced-command-line#oh-my-zsh[plugin with autocompletion].
+
+Go get it.
+
+
