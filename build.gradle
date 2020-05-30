@@ -3,16 +3,20 @@ plugins {
     id 'org.ajoberstar.git-publish' version '2.1.3'
 }
 
+jbake {
+    configuration['asciidoctor.attributes.export'] = true
+    version = "2.6.5"
+}
+
 gitPublish {
     repoUri = 'git@github.com:seakayone/blog.git'
     branch = 'gh-pages'
-
-    // what to publish, this is a standard CopySpec
     contents {
         from(file('build/jbake')) {
             into '.'
         }
     }
+    commitMessage = 'Publish site'
 }
 
 gitPublishPush.dependsOn('bake')
