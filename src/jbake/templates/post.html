@@ -9,7 +9,7 @@
 <main>
   <article class="blog-post">
     <h1 class="blog-post__title" th:text='${content.title}'>title</h1>
-    <p class="blog-post__date" th:text='${#dates.format(content.date,"dd MMMM yyyy")}'>date</p>
+    <p class="blog-post__date" th:text='${#dates.format(content.date,"d MMMM yyyy")}'>date</p>
     <p class="blog-post__content" th:utext='${content.body}'>body</p>
   </article>
 </main>
