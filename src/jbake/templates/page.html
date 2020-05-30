@@ -1,9 +1,9 @@
 <!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
-  <head th:replace="header.thyme::head"/>
+  <head th:replace="header.html::head"/>
   <body>
-    <div th:replace="menu.thyme::menu"/>
+    <div th:replace="menu.html::menu"/>
 
     <div class="callout large primary">
       <div class="row column text-center">
@@ -16,6 +16,6 @@
         <p th:utext='${content.body}'>body</p>
       </div>
     </div>
-    <div th:replace="footer.thyme::footer"/>
+    <div th:replace="footer.html::footer"/>
   </body>
 </html>

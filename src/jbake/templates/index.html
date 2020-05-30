@@ -1,9 +1,8 @@
 <!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
-
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
-  <head th:replace="header.thyme::head"/>
+  <head th:replace="header.html::head"/>
   <body onload="prettyPrint()">
-    <div th:replace="menu.thyme::menu"/>
+    <div th:replace="menu.html::menu"/>
 
     <div class="callout large primary" th:attr="data-interchange='[img/proxima/small.jpg, small], [img/proxima/medium.jpg, medium], [img/proxima/large.jpg, large]'">
       <div class="row column text-center">
@@ -24,6 +23,6 @@
         <p>Older posts are available in the <a th:href='${content.rootpath+config.archive_file}' href='href'>archive</a>.</p>
       </div>
     </div>
-    <div th:replace="footer.thyme::footer"/>
+    <div th:replace="footer.html::footer"/>
   </body>
 </html>
