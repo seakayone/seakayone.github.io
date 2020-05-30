@@ -5,6 +5,7 @@ Christian Kleinbölting
 :jbake-status: published
 :jbake-tags: java, optional, null
 :idprefix:
+:summary: Handling Java's `null` with Java 8 `Optional`
 
 Java has made https://www.infoq.com/presentations/Null-References-The-Billion-Dollar-Mistake-Tony-Hoare[the billion dollar mistake]. Its creators decided it is a good idea to implement the `null` reference. This reference leads developers having to deal a lot with unexpected behaviours and the ubiquitious `NullPointerException`. The problem with `null` is that it does not provide convenient ways to deal with its presence other than checking for its existence. This way it is subverting any type system, making the code hard to read and debug and possibly leads to bad design.
 

@@ -114,6 +114,10 @@ p {
   color: #aeaeae;
 }
 
+.readMore {
+  font-style: italic;
+}
+
 footer {
   width: 100vw;
   font-family: sans-serif;

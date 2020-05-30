@@ -5,6 +5,7 @@ Christian Kleinbölting
 :jbake-status: published
 :jbake-tags: blog, zsh plugin, shell, git, .gitignore
 :idprefix:
+:summary: Get your `.gitignore` as a service.
 
 For some people it is well and good to have a nicely handcrafted `.gitignore` in their project.
 However, I myself am super lazy.

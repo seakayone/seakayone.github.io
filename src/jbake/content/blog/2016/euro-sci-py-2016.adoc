@@ -1,12 +1,14 @@
 = EuroSciPy Conference 2016
-Jonathan Bullock
+Christian Kleinbölting
 2016-08-27
 :jbake-type: post
 :jbake-status: published
-:jbake-tags: blog, asciidoc
+:jbake-tags: blog, python, conference
 :idprefix:
+:summary:Very short notes on EuroSciPy 2016.
 
-Being a Java and (sometimes) Scala developer on a daily basis I have thought to give it a try and take a look beyond my own nose. Thus I have been attended the https://www.euroscipy.org/2016/program/[EuroSciPy Conference 2016].
+Being a Java and (sometimes) Scala developer on a daily basis I have thought to give it a try and take a look beyond my own nose.
+Thus, I have been attended the https://www.euroscipy.org/2016/program/[EuroSciPy Conference 2016].
 
 These are some talks I really enjoyed and seem worthy of mention:
 

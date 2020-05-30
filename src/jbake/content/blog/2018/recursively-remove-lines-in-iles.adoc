@@ -5,6 +5,7 @@ Christian Kleinbölting
 :jbake-status: published
 :jbake-tags: blog, shell, sed, microblog
 :idprefix:
+:summary: How to delete all lines containing a certain keyword in a directory and its children.
 
 
 Sometimes you would like to delete all lines containing a certain `KEYWORD` word for all files contained in a folder all of it child folders.
