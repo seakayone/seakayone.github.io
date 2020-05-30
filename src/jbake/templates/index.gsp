@@ -21,4 +21,5 @@
 <aside>
     <p>More articles can be found in the <a href="/archive.html">archive</a>.</p>
 </aside>
+
 <% include "footer.gsp" %>
