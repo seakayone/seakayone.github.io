@@ -7,8 +7,8 @@
                    type="application/rss+xml"/>
         <description>JBake Bootstrap Template</description>
         <language>en-gb</language>
-        <pubDate>Sat, 30 May 2020 23:12:10 +0200</pubDate>
-        <lastBuildDate>Sat, 30 May 2020 23:12:10 +0200</lastBuildDate>
+        <pubDate>Sat, 30 May 2020 23:44:41 +0200</pubDate>
+        <lastBuildDate>Sat, 30 May 2020 23:44:41 +0200</lastBuildDate>
         
         <item>
             <title>Do not write your .gitignore if you are lazy</title>
