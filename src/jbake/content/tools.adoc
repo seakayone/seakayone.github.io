@@ -58,5 +58,5 @@ A curated list of tools used by me.
 == Java
 
 * https://gradle.org/[gradle]
-** https://github.com/dougborg/gdub[gdub]
+** http://www.gdub.rocks/[gdub]
 ** https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/gradle[Oh My Zsh plugin]
