@@ -1,4 +1,6 @@
 <header>
+  <div class="name">Christian Kleinboelting</div>
+  <hr>
   <nav class="nav">
     <a class="nav__link" href="${content.rootpath}index.html">Blog</a>
     <a class="nav__link" href="${content.rootpath}about.html">About</a>

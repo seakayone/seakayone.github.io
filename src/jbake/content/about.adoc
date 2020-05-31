@@ -8,15 +8,19 @@ Christian Kleinbölting
 
 == Me
 
-image:img/portraet-pixel.png[Picture of me,200,200,role="left"]
+image::img/portraet-pixel.png[pixel picture of me,200,200]
 
-image:img/mail-btn.svg[link="mailto:christian@kleinboelting.de",Github,32,32]
-image:img/github-btn.svg[link="https://github.com/seakayone",Github,32,32]
-image:img/twitter-btn.svg[link="https://twitter.com/kle1nb",Twitter,32,32]
-image:img/linkedin-btn.svg[link="https://www.linkedin.com/in/christian-kleinbölting-16353015b/",32,32]
-image:img/xing-btn.svg[link="https://www.xing.com/profile/Christian_Kleinboelting",Github,32,32]
+Passionate solution engineer working for https://signal7.de/[Signal7].
+Java Developer.
+Angular newbie.
+Knows some stuff about OpenID Connect, Kafka, Kubernetes and kustomize.
+https://www.baselone.ch/one#kommitee[Member of the Basel One Conference committee].
 
-== Technology
+image:img/mail-btn.svg[link="mailto:christian@kleinboelting.de",Github,64,64]
+image:img/github-btn.svg[link="https://github.com/seakayone",Github,64,64]
+image:img/twitter-btn.svg[link="https://twitter.com/kle1nb",Twitter,64,64] image:img/linkedin-btn.svg[link="https://www.linkedin.com/in/christian-kleinbölting-16353015b/",64,64] image:img/xing-btn.svg[link="https://www.xing.com/profile/Christian_Kleinboelting",Github,64,64]
+
+== Blog Technology
 
 Page was build using the following components:
 
@@ -51,6 +55,12 @@ Used by Gradle and GSP.
 * https://fontawesome.com/icons?d=gallery[Icons by Fontwawesome]
 Social media buttons.
 
+* Webfonts used
+** https://www.theleagueofmoveabletype.com/[The League of Moveable Type] fonts are subject to the Open Font License and are free and open-source.
+*** https://www.theleagueofmoveabletype.com/ostrich-sans[Ostrich Sans] by Tyler Finck
+*** https://www.theleagueofmoveabletype.com/raleway[Raleway] by Matt McInerney
+** https://fonts.google.com/specimen/Alegreya[Alegreya] by Huerta Tipográfica
+
 == Sources
 
-Find the sources of this blog on https://github.com/seakayone/blog[GitHub].
+Find the sources of this blog on https://github.com/seakayone/seakayone.github.io[GitHub].

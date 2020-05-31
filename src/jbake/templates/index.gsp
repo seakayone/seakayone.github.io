@@ -4,7 +4,7 @@
 
 <main>
     <% published_posts.take(4).each { post -> %>
-    <article class="blog-post blog-post__teaser">
+    <article class="blog-post">
         <h1 class="blog-post__title">${post.title}</h1>
 
         <p class="blog-post__date">${new java.text.SimpleDateFormat("d MMMM yyyy", Locale.ENGLISH).format(post.date)}</p>
@@ -15,6 +15,7 @@
             <a class="readMore" href="${content.rootpath}${post.uri}">Read more&hellip;</a>
         </p>
     </article>
+    <hr>
     <% } %>
 </main>
 

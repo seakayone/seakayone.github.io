@@ -1,6 +1,7 @@
 <footer>
+    <hr>
     <div>
-        <a href="#">^ Go to top ^</a> | &copy; Christian Kleinb&ouml;lting, <a
+        <a href="#">^ Go to top ^</a> | &copy; Christian Kleinboelting, <a
             href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed">CC BY-NC-SA 4.0</a>
     </div>
 </footer>
