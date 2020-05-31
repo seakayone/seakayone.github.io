@@ -8,7 +8,9 @@ Christian Kleinbölting
 
 == Me
 
-image::img/portraet-pixel.png[pixel picture of me,200,200]
+--
+image::img/portraet-pixel.png[pixel picture of me,200,200,float=left]
+--
 
 Passionate solution engineer working for https://signal7.de/[Signal7].
 Java Developer.
@@ -16,9 +18,14 @@ Angular newbie.
 Knows some stuff about OpenID Connect, Kafka, Kubernetes and kustomize.
 https://www.baselone.ch/one#kommitee[Member of the BaselOne conference committee].
 
-image:img/mail-btn.svg[link="mailto:christian@kleinboelting.de",Github,64,64]
-image:img/github-btn.svg[link="https://github.com/seakayone",Github,64,64]
-image:img/twitter-btn.svg[link="https://twitter.com/kle1nb",Twitter,64,64] image:img/linkedin-btn.svg[link="https://www.linkedin.com/in/christian-kleinbölting-16353015b/",64,64] image:img/xing-btn.svg[link="https://www.xing.com/profile/Christian_Kleinboelting",Github,64,64]
+[.float-group]
+--
+image:img/mail-btn.svg[link="mailto:christian@kleinboelting.de",Github,42,42]
+image:img/github-btn.svg[link="https://github.com/seakayone",Github,42,42]
+image:img/twitter-btn.svg[link="https://twitter.com/kle1nb",Twitter,42,42]
+image:img/linkedin-btn.svg[link="https://www.linkedin.com/in/christian-kleinbölting-16353015b/",42,42]
+image:img/xing-btn.svg[link="https://www.xing.com/profile/Christian_Kleinboelting",Github,42,42]
+--
 
 == Blog Technology
 
