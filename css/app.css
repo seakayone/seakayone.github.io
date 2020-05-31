@@ -71,10 +71,6 @@ header .name {
   header .name {
     font-size: 2rem;
   }
-
-  .nav__link {
-    font-size: 1rem;
-  }
 }
 
 .nav {
@@ -99,6 +95,12 @@ hr {
   text-decoration: none;
   position: relative;
   font-size: 1.618rem;
+}
+
+@media only screen and (max-width: 800px) {
+  .nav__link {
+    font-size: 1rem;
+  }
 }
 
 .nav__link:after {
