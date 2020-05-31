@@ -121,7 +121,7 @@ footer {
   width: 100vw;
   font-family: sans-serif;
   margin-top: 2rem;
-  padding: 1rem;
+  padding: .35rem;
   background-color: var(--clr-bg-dark);
   color: var(--clr-text-light);
   align-self: end;
