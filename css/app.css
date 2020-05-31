@@ -93,8 +93,8 @@ hr {
   color: var(--clr-text-links-dark);
   text-transform: uppercase;
   text-decoration: none;
-  font-weight: bold;
   position: relative;
+  font-size: 1.618rem;
 }
 
 .nav__link:after {
@@ -169,6 +169,53 @@ footer {
 
 footer a {
   color: var(--clr-text-dark-dim);
+}
+
+/* Asciidoctor classes*/
+.left {
+  float: left !important
+}
+
+.right {
+  float: right !important
+}
+
+.text-left {
+  text-align: left !important
+}
+
+.text-right {
+  text-align: right !important
+}
+
+.text-center {
+  text-align: center !important
+}
+
+.text-justify {
+  text-align: justify !important
+}
+
+.hide {
+  display: none
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto
+}
+
+.spread {
+  width: 100%
+}
+
+.clearfix:before, .clearfix:after, .float-group:before, .float-group:after {
+  content: " ";
+  display: table
+}
+
+.clearfix:after, .float-group:after {
+  clear: both
 }
 
 /*Pretty print source code styles*/
