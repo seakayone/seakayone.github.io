@@ -7,8 +7,8 @@
                    type="application/rss+xml"/>
         <description>A solution engineer is writing about Java, Spring, Asciidoctor and more developer stuff.</description>
         <language>en-gb</language>
-        <pubDate>Sun, 31 May 2020 15:48:35 +0200</pubDate>
-        <lastBuildDate>Sun, 31 May 2020 15:48:35 +0200</lastBuildDate>
+        <pubDate>Sun, 31 May 2020 16:55:34 +0200</pubDate>
+        <lastBuildDate>Sun, 31 May 2020 16:55:34 +0200</lastBuildDate>
         
         <item>
             <title>Do not write your .gitignore if you are lazy</title>

@@ -17,10 +17,10 @@
 }
 
 :root {
-  --clr-bg-light: #fdfff7;
+  --clr-bg-light: #f6f3ea;
   --clr-bg-dark: #1a78b6;
   --clr-text-light: #fefefe;
-  --clr-text-dark: #333;
+  --clr-text-dark: rgba(12, 12, 10, 0.8);
   --clr-text-dark-dim: #767676;
   --clr-text-links-dark: #1a78b6;
 }
@@ -70,6 +70,10 @@ header .name {
 @media only screen and (max-width: 800px) {
   header .name {
     font-size: 2rem;
+  }
+
+  .nav__link {
+    font-size: 1rem;
   }
 }
 
