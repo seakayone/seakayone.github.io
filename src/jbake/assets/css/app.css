@@ -43,8 +43,8 @@ header {
   display: flex;
   justify-content: center;
   background-color: var(--clr-bg-dark);
-  box-shadow: 0 4px 2px -2px gray;
-  padding: 1rem;
+  box-shadow: 0 4px 8px -2px #43507d;
+  padding: .35rem;
   margin-bottom: 2rem;
 }
 
@@ -54,7 +54,6 @@ header {
   display: flex;
   justify-content: space-between;
   font-family: sans-serif;
-  font-size: 1.618rem;
 }
 
 .nav__link {
