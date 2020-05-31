@@ -93,8 +93,8 @@ hr {
   color: var(--clr-text-links-dark);
   text-transform: uppercase;
   text-decoration: none;
-  font-weight: bold;
   position: relative;
+  font-size: 1.618rem;
 }
 
 .nav__link:after {
