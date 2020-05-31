@@ -6,12 +6,24 @@ Christian Kleinbölting
 :jbake-tags: blog, asciidoc
 :idprefix:
 
+== Me
+
+image:img/portraet-pixel.png[Picture of me,200,200,role="left"]
+
+image:img/mail-btn.svg[link="mailto:christian@kleinboelting.de",Github,32,32]
+image:img/github-btn.svg[link="https://github.com/seakayone",Github,32,32]
+image:img/twitter-btn.svg[link="https://twitter.com/kle1nb",Twitter,32,32]
+image:img/linkedin-btn.svg[link="https://www.linkedin.com/in/christian-kleinbölting-16353015b/",32,32]
+image:img/xing-btn.svg[link="https://www.xing.com/profile/Christian_Kleinboelting",Github,32,32]
 
 == Technology
+
 Page was build using the following components:
 
 * https://gradle.org/[Gradle] - Build automization +
-This is the glue which lets me automize everything. I am lazy and I do not want to maintain any local installation in order to be able to publish on my blog. The only requirement that this project has is a https://www.java.com/[JVM].
+This is the glue which lets me automize everything.
+I am lazy and I do not want to maintain any local installation in order to be able to publish on my blog.
+The only requirement that this project has is a https://www.java.com/[JVM].
 
 * http://jbake.org/[Jbake] - Static site/blog generator +
 The actual workhorse, it collects my content and generates the complete site using the Thymeleaf templating engine and AsciidoctorJ to transform my *.adoc content into html.
@@ -22,11 +34,13 @@ Allows me to use jbake from gradle.
 * https://gsp.grails.org/latest/guide/index.html[Groovy Server Pages (GSP)] - Templating Engine +
 GSP (Groovy Server Pages) - A server-side view rendering technology based on Groovy.
 
-* https://github.com/ajoberstar/gradle-git[Gradle Git and Github plugin] - Publishing on GitHub pages +
+n* https://github.com/ajoberstar/gradle-git[Gradle Git and Github plugin] - Publishing on GitHub pages +
 Nice plugin which allows me to use Gradle as the publishing tool for the https://pages.github.com/[GitHub pages].
 
 * https://github.com/asciidoctor/asciidoctorj[AsciidoctorJ] - Simple markup for the content +
-All content is written in http://asciidoctor.org/docs/what-is-asciidoc/[AsciiDoc]. I like AsciiDoc, a  lightweight markup language, because the markup is quite simple and the content still readable. The Java implementation has a very good Gradle and Jbake integration.
+All content is written in http://asciidoctor.org/docs/what-is-asciidoc/[AsciiDoc].
+I like AsciiDoc, a lightweight markup language, because the markup is quite simple and the content still readable.
+The Java implementation has a very good Gradle and Jbake integration.
 
 * https://github.com/google/code-prettify/[Prettify.js] with https://cdn.rawgit.com/google/code-prettify/master/styles/index.html#sunburst[Sunburst theme] +
 Automatically allow code to be styled and syntax highlighted using JavaScript.
@@ -34,5 +48,9 @@ Automatically allow code to be styled and syntax highlighted using JavaScript.
 * http://www.groovy-lang.org/[Groovy] +
 Used by Gradle and GSP.
 
+* https://fontawesome.com/icons?d=gallery[Icons by Fontwawesome]
+Social media buttons.
+
 == Sources
+
 Find the sources of this blog on https://github.com/seakayone/blog[GitHub].

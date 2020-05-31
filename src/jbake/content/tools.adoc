@@ -49,7 +49,7 @@ A curated list of tools used by me.
 ** https://plugins.jetbrains.com/plugin/9792-key-promoter-x[Key Promoter X plugin]
 * https://code.visualstudio.com/[Visual Studio Code]
 
-== Docker && Kubernetes
+== Docker & Kubernetes
 
 * https://docs.docker.com/docker-for-mac/[Docker Desktop for Mac]
 * https://github.com/ahmetb/kubectx[kubectx]
