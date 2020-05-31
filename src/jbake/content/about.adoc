@@ -14,7 +14,7 @@ Passionate solution engineer working for https://signal7.de/[Signal7].
 Java Developer.
 Angular newbie.
 Knows some stuff about OpenID Connect, Kafka, Kubernetes and kustomize.
-https://www.baselone.ch/one#kommitee[Member of the Basel One Conference committee].
+https://www.baselone.ch/one#kommitee[Member of the BaselOne conference committee].
 
 image:img/mail-btn.svg[link="mailto:christian@kleinboelting.de",Github,64,64]
 image:img/github-btn.svg[link="https://github.com/seakayone",Github,64,64]
