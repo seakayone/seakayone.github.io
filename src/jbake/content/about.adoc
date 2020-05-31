@@ -34,7 +34,7 @@ Allows me to use jbake from gradle.
 * https://gsp.grails.org/latest/guide/index.html[Groovy Server Pages (GSP)] - Templating Engine +
 GSP (Groovy Server Pages) - A server-side view rendering technology based on Groovy.
 
-n* https://github.com/ajoberstar/gradle-git[Gradle Git and Github plugin] - Publishing on GitHub pages +
+* https://github.com/ajoberstar/gradle-git[Gradle Git and Github plugin] - Publishing on GitHub pages +
 Nice plugin which allows me to use Gradle as the publishing tool for the https://pages.github.com/[GitHub pages].
 
 * https://github.com/asciidoctor/asciidoctorj[AsciidoctorJ] - Simple markup for the content +
