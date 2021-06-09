@@ -1,0 +1,25 @@
+= Faking a Kubernetes healtcheck 
+Christian Kleinbölting
+2020-06-09
+:jbake-type: post
+:jbake-status: published
+:jbake-tags: blog, kubernetes, healtcheck, k8s 
+:idprefix:
+:summary: Get your `.gitignore` as a service.
+
+Use the following on your own risk! Deactivating the Kubernetes health check is something you would not want to do in production.
+
+For troubleshooting though or if you app not yet has a health endpoint (I wonder why… change that!) it could be an option.
+
+With a customization you could use the custom health check to simply fake a successful check like so:
+[source,yaml]
+--
+resource.customizations: |
+    core/v1/Service:
+        health.lua: |
+          check = {}
+          check.status = "up"
+          return check 
+--
+
+With this you could also fake a failing health check and test your deployments.
