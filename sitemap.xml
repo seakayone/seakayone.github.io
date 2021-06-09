@@ -14,6 +14,11 @@
     </url>
     
     <url>
+        <loc>http://seakayone.github.io//blog/2020/faking-k8s-healtcheck.html</loc>
+        <lastmod>2020-06-09</lastmod>
+    </url>
+    
+    <url>
         <loc>http://seakayone.github.io//blog/2019/dont-write-gitignore-if-you-are-lazy.html</loc>
         <lastmod>2019-05-30</lastmod>
     </url>

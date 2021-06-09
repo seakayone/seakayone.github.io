@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Faking a Kubernetes healtcheck</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description"
+          content="Informal blog about software crafting and engineering. Not concluding list of topics: Software Quality, Testing, Backend Development, Tooling and Tipps."/>
+    <meta name="author" content="Christian Kleinbölting"/>
+    <meta name="keywords" content="Software, Clean Code, Software Testing, Java, Scala, Python"/>
+    <meta name="generator" content="JBake"/>
+
+    <!-- Le styles -->
+    <link rel="stylesheet"
+          href="../../css/app.css">
+    <link rel="shortcut icon"
+          href="../../favicon.ico">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,700;1,400;1,700&display=swap">
+</head>
+
+<body onload="prettyPrint()">
+
+
+
+<header>
+  <div class="name">Christian Kleinboelting</div>
+  <hr>
+  <nav class="nav">
+    <a class="nav__link" href="../../index.html">Blog</a>
+    <a class="nav__link" href="../../about.html">About</a>
+    <a class="nav__link" href="../../tools.html">Tools</a>
+    <a class="nav__link" href="../../archive.html">Archive</a>
+    <a class="nav__link" href="../../feed.xml">Feed</a>
+  </nav>
+</header>
+
+
+<main>
+  <article class="blog-post">
+    <h1 class="blog-post__title">Faking a Kubernetes healtcheck</h1>
+    <p class="blog-post__date">9 June 2020</p>
+    <p class="blog-post__content"><div class="paragraph">
+<p>Use the following on your own risk! Deactivating the Kubernetes health check is something you would not want to do in production.</p>
+</div>
+<div class="paragraph">
+<p>For troubleshooting though or if you app not yet has a health endpoint (I wonder why… change that!) it could be an option.</p>
+</div>
+<div class="paragraph">
+<p>With a customization you could use the custom health check to simply fake a successful check like so:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="prettyprint highlight"><code data-lang="yaml">resource.customizations: |
+    core/v1/Service:
+        health.lua: |
+          check = {}
+          check.status = "up"
+          return check</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>With this you could also fake a failing health check and test your deployments.</p>
+</div></p>
+  </article>
+</main>
+
+<footer>
+    <hr>
+    <div>
+        <a href="#">^ Go to top ^</a> | &copy; Christian Kleinboelting, <a
+            href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed">CC BY-NC-SA 4.0</a>
+    </div>
+</footer>
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script
+    src="../../js/prettify.js"></script>
+
+</body>
+</html>
+
